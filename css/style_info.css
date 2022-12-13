@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root{
+  --dark-text: #4E4A4A;
+  --light-text: #fff;
+  --secondary-text: #73C14A;
+
+  --secondary-color:#EFDE6A;
+  --secondary-color_bis:#73C14A;
+}

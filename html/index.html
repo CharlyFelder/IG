@@ -15,7 +15,7 @@
       <div class = "menu"> 
         <li><a href="#presentation">Présentation</a></li>
         <li><a href="#functioning-anchor">Fonctionnement</a></li>
-        <li><a href="#try-anchor">Essayer maintenant</a></li>
+        <li><a href="#try-anchor">Configurateur</a></li>
         <li><a href="#contact-anchor">Contactez nous</a></li>
         <li><a href="">S'inscrire</a></li>
       </div> 
@@ -24,7 +24,9 @@
 <main>
 
     <section class = "header">
+    <div class="taille-header">
       <img src="../img/img_header.jpg" alt="">
+    </div>
       <h1 class="h1-dark">Créez et réservez <br>
         votre <span class="color-secondary-text">stand en bois</span> <br>
         avec notre configurateur 3D</h1>
@@ -38,7 +40,9 @@
       Sit amet venenatis urna cursus eget nunc. Morbi tempus iaculis urna id volutpat.     
       Urna cursus eget nunc.      
       <br><br>  sit amet venenatis urna cursus eget nunc.Cursus vitae congue mauris rhoncus aenean vel. Viverra orci sagittis eu volutpat odio facilisis. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Sit amet venenatis urna cursus eget nunc. Morbi tempus iaculis urna id volutpat. Urna cursus eget nunc. sit amet venenatis urna cursus eget nunc. <br>
-       <a class="uppercase" href="index_info.html">En savoir plus</a></p>
+      <br>   sit amet venenatis urna cursus eget nunc.Cursus vitae congue mauris rhoncus aenean vel. Viverra orci sagittis eu volutpat odio facilisis. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Sit amet venenatis 
+      <br>
+      <a class="uppercase" href="index_info.html">En savoir plus</a></p>
   </section>
 
   <section class="functioning">
@@ -66,28 +70,49 @@
     <img class ="img-try" src="../img/bande_ess.svg" alt="">
     <h2 id="try-anchor" class="title">Essayer maintenant</h2>
     <img class = "icon-try" src="../img/icon_ess.svg" alt="">
-    <button> <a class="button"href="configurateur.html">Configurateur <br> ici</a> </button>
+    <button class="style-button"> <a class="button"href="configurateur.html">Configurateur <br> ici</a> </button>
 
   </section>
 
   <section class="contact">
     <div class="container-contact">
-      <h2 id="contact-anchor">Contactez nous</h2>
-      <img class = "icon" src="../img/icon_contact.svg" alt="">
+      <h2 id="contact-anchor" class="title">Contactez nous</h2>
+      <img class = "icon-contact" src="../img/icon_contact.svg" alt="">
     </div>
 
-    <form action="">
 
-    </form>
-    <p class="dark">www.igexpo.fr  |  +33 (0)3 81 51 42 24  |  info@igexpo.fr</p>
-    <img src="../img/icon_ess.svg" alt="">
+<div class="form-contact">  
+  <form action="" method="post">
+   <div class="conteneur-nom-mail">
+    <div class ="nom">
+      <label for="nom"></label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+    </div>
+    <div class="mail">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="Votre adresse mail" required>
+    </div>
+  </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea id="message" name="message" placeholder="Écrivez votre message" required></textarea>
+    </div>
+    <div class="button-contact">
+      <button type="submit">Envoyer mon message</button>
+    </div>
+  </form>
+</div>
+
+   <div class="text-center">
+    <p class="dark info">www.igexpo.fr  |  +33 (0)3 81 51 42 24  |  info@igexpo.fr</p>
+  </div>
   </section>
 
 </main>
 
 <footer>
-  <p class="light">© Copyright 2022 | CUBE DE BOIS</p>
-  <img src="../img/linkedin" alt="">
+  <p class="light-footer">© Copyright 2022 | CUBE DE BOIS</p>
+  <img class="icon-footer" src="../img/linkedin.svg" alt="">
 </footer>
 
 </body>

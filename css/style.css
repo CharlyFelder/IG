@@ -7,8 +7,10 @@
   --light-text: #fff;
   --secondary-text: #73C14A;
 
-  --secondary-color:#EFDE6A;
+  --secondary-color:#F0DD6C;
   --secondary-color_bis:#73C14A;
+
+
 }
 
 * {
@@ -19,7 +21,7 @@
 }
 
 body{
-  width: 100vw;
+  width: 100%;
 }
 
 /*MENU*/
@@ -29,7 +31,7 @@ nav{
   justify-content: space-between;
   margin-left: 10vh;
   margin-right: 10vh;
-  height: 15vh;
+  height: 14vh;
   /* margin-top: 3vh; */
   align-items: center;
   background-color:var(--light-text); 
@@ -50,7 +52,7 @@ nav{
 
 
   nav .logo img{
-    width: 15vh;
+    width: 18vh;
     
   }
   
@@ -60,7 +62,7 @@ nav{
   text-align: center;
   margin: 0 25px;
   color: var(--dark-text);
-  font-size: 1vw;
+  font-size: 1.2vw;
   }
 
   .menu a:hover{
@@ -68,9 +70,12 @@ nav{
   }
 
 /*HEADER*/
-
+.taille-header{
+  display: flex;
+  justify-content: center;
+}
 .header img{
-  width: 100vw;
+  width: 90%;
   margin-bottom: 6vh;
   
 }
@@ -119,13 +124,13 @@ bottom: 0;
 
 .presentation{
   position: relative;
-  width: 100vw;
+  width: 100%;
   display: flex;    /* Pour centrer le texte p */
   justify-content: center;
 }
 
 .presentation img{
-  width: 100vw;
+  width: 100%;
 }
 
 .light-presentation{   /* texte    */
@@ -133,8 +138,8 @@ bottom: 0;
   top: 30%;
   color: var(--light-text);
   width: 60vw;
-  line-height: 2vw;
-  font-size: 1.4vw;
+  line-height: 3.3vh;
+  font-size: 1.2vw;
 }
 
 #presentation-anchor{
@@ -189,11 +194,11 @@ a.uppercase{
 /* ESSAYER  */
 
 .try img.img-try{
-  width: 100vw;
+  width: 100%;
 }
 
 .try{
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;   
   justify-content: center;
@@ -215,12 +220,12 @@ a.uppercase{
   right:20% ;
 }
 
-button {
+button.style-button {
   position: absolute;
 
 }
 
-button {
+button.style-button {
   display: inline-block;
   background-color: #E3FFDE;
   border-radius: 50px;
@@ -254,4 +259,115 @@ a.button:hover{
 
  
 }
+
+/*CONTACT*/
+
+.contact{
+ 
+  width: 100%;
+  margin-bottom: 10vh;
+}
+#contact-anchor{
+  
+  top: 15%;   /* Pourquoi ça marche sans position??      */
+  
+  height:56px ;
+}
+.icon-contact{
+  width: 4vw;
+}
+.container-contact{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10vh;
+  margin-left: 10vh;
+
+}
+
+.form-contact{
+
+  margin-top: 7vh;
+
+
+}
+.conteneur-nom-mail{
+  display: flex;
+  justify-content: center;
+}
+
+.nom input, .mail input, .message textarea{
+  background-color:#D9D9D9 ;
+  border:none;
+  font-size: 16px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+.nom input, .mail input{
+  height: 50px;
+  padding-left: 10px;
+  width: 490px;
+}
+.nom input{
+  margin-right: 20px;
+}
+.mail input{
+  margin-left: 20px;
+}
+.message textarea{
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  width: 1020px;
+  margin-top: 40px;
+}
+
+::placeholder{
+  color:var(--dark-text);
+
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+}
+
+.button-contact{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.info{
+  margin-top: 40px;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+}
+
+/*FOOTER */
+footer{
+  height: 13vh;
+  width: 100%;
+  background-image: url("../img/footer.svg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10vh;
+  padding-left: 10vh;
+}
+
+.light-footer{
+  color: var(--light-text);
+}
+
+.icon-footer{
+  width:3vw ;
+}
+
+
+
+
+
+
 

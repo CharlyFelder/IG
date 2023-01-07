@@ -2,15 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400&family=Noto+Sans:wght@400;500;600;700&display=swap');
 
 :root{
-  --dark-text: #4E4A4A;
-  --light-text: #fff;
-  --secondary-color:#EFDE6A;
-  --third-color: #73C14A;
-  --border-container: #2a5f31;
-  --dark-orange-color: #D7c22E
+  /* Colors */
+    --dark-text: #4E4A4A;
+    --light-text: #fff;
+    --secondary-color:#EFDE6A;
+    --third-color: #73C14A;
+    --border-container: #2a5f31;
+    --dark-orange-color: #D7c22E;
+  /* Font sizes */
+    --font-sx: 1.4rem ;
+    --font-s: 1.6rem ;
+    --font-m:2.4rem ;
+    --font-l: 3.2rem ;
+    --font-xl: 3.6rem ; 
+  
+  /* Spac4remes */
+    --space-xs: 12px;
+    --space-s:  24px;
+    --space-m:  48px;
+    --space-l:  96px;
 }
 
-html {
+html, body {
   font-size: 62.5%; /* permet de ramener la taille par défaut à 10px (10 / 16 = 0.625) */
 }
 
@@ -18,69 +31,63 @@ html {
   padding: 0;
   margin: 0;
   font-family: montserrat;
-  font-size: 1.6rem;
+  font-size: var(--font-s);
 }
 
 h1, h2, h3 {
   font-family: 'noto sans';
 }
 
+p{
+  line-height: 3rem;
+}
+
 
 /* --------------------------------- Root Rules --------------------------------- */
 
 
-/* --------------------------------- LOGO ------------------------------- */
-.logoIG {
-  max-width: 20vw;
-  max-height: 10vh;
-  grid-column: 2 / 4;
-  grid-row: 1 / 4;
+/* --------------------------------- LOGO IG ------------------------------- */
+.logoIGexpo {
+  /* max-width: 180px;
+  max-height: 80px; */
+  height:100%;
+  max-width: auto;
  }
-/* --------------------------------- LOGO ------------------------------- */
+/* --------------------------------- LOGO IG ------------------------------- */
 
 
 /* --------------------------------- NavBar ------------------------------- */
 header {
-  background-color: var(--light-text);
-  height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(24, 1fr);
-  align-items: center;
-  justify-items: center;
-  /* padding: 2vh 0vh; */
-}
-
-.headerNav {
-  display: flex;
-  align-items: center;
-  grid-column: 8 / -2;
-  grid-row: 1 / 4;
-}
-
-.endMenu {
-  display: flex;
-  float: right;
+  height: 100vh;
 }
 
 nav{
-  grid-column: 12 / 22;
-  grid-row: 2 / 3;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 80px;
+  margin: auto;
+  background-color:var(--light-text); 
+  gap: 10vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
 }
 
 ul{
   list-style: none;
   display: flex;
   gap: 5vw;
-  justify-content: flex-end;
+  justify-content:center;
+  align-items: center;
+  justify-items: center;
 }
 
 li a{
   text-decoration: none;
   color: var(--dark-text);
   text-transform: uppercase;
-  font-weight: 200;
 }
 
 nav ul li {
@@ -96,69 +103,71 @@ a {
 
 nav ul li a {
   font-family: 'noto sans';
-  font-weight: 100;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: var(--font-s); 
   align-items: center;
   justify-items: center;
+  color: var(--dark-text);
 }
-
-
-
-
 /* --------------------------------- NavBar ------------------------------- */
 
 /* --------------------------------- User Icon ------------------------------- */
 .userIcon {
   max-width: 5vw;
   max-height: 5vh;
-  grid-column: 23 / 24;
-  grid-row: 2 / 3;
 }
 /* --------------------------------- User Icon ------------------------------- */
 
 /* --------------------------------- IMG Landing ------------------------------- */
-#bgImg{
-  grid-column: 1 / -1;
-  grid-row: 4/ -2;
-  max-width: 100%;
-  /* margin-top: 2vh; */
-  /* margin-left: -0.5vw; */
+.landing{
+  height: calc(100% - 100px);
+  background-color: #4E4A4A;
+  display: flex;
 }
 
+.bgImage{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 /* --------------------------------- IMG Landing ------------------------------- */
 
 
 /* --------------------------------- Landing page Text ------------------------------- */
 .excerptHeader {
-  font-size: 3.9rem;
+  font-size: var(--font-xl);
   max-width: 50rem;
   height: auto;
-  grid-column: 2 / 16;
-  grid-row: 18/ 24;
-  /* position: absolute;
-  margin-left: 5vh;
-  bottom: 17.5vh;
-  margin: 0;
-  padding: 0; */
+  position: absolute;
+  left: 30%; /* Mise en place de l'alignement au centre */
+  transform: translateX(-50%); /* Correction de l'offset provoqué par la 
+  /* 
+  left: 10rem; */
+  font-size: var(--font-xl);
+  bottom: 2rem;
 }
 
 .boldGreen {
   font-weight: bold;
   color:var(--third-color);
-  font-size: 3.8rem;
+  font-size: var(--font-xl);
 }
 /* --------------------------------- Landing page Text ------------------------------- */
 
-.headerCardConstruct{
-  background-color: var(--third-color);
-  border: solid 0.5rem var(--border-container);
-  min-height: 15rem;
+
+/* --------------------------------- Card Gobal Rules ------------------------------- */
+.card {
+  height: 100vh;
+}
+
+.headerCards{
+  border: solid 0.3rem var(--border-container);
+  min-height: 10rem;
   z-index: 10;
   margin: 25px 0px;
   display: flex;
   margin: 0;
-  border-bottom-radius: 50px ;
-} 
+}
 
 .insideTitleCard{
   text-align: center;
@@ -172,13 +181,31 @@ nav ul li a {
 .titleCard {
   margin: 0;
   padding: 0;
-  font-size: 3.8rem;
+  font-size:var(--font-xl);
   font-weight: bold;
 }
 
-
 .logoTitleCard {
   float: right;
+} 
+
+.contentCard{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2.5rem 10rem;
+  height: 80%;
+}
+
+.rightSide .leftSide {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+/* --------------------------------- Card Global Rules ------------------------------- */
+
+
+.headerCardConstruct{
+  background-color: var(--third-color);
 } 
 
 #logoNaturePlus{
@@ -186,13 +213,6 @@ nav ul li a {
   max-width: 200px;
   max-height: 200px;
   margin: auto;
-}
-
-.contentCard{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 5rem;
-  padding: 2.5rem 10rem;
 }
 
 .containerExcerpt {
@@ -204,28 +224,25 @@ nav ul li a {
 p.excerptCardContent{
   justify-content: center;
   width: auto;
-  margin: 2rem 0rem;
-  padding: 1rem 0rem;
+  /* margin: 2rem 0rem;
+  padding: 1rem 0rem; */
 }
 
-.rightSide .leftSide {
-  padding: 100px 50px;
-  display: inline-block;
-}
 
-.photoCard {
-  max-width: auto;
+.imageCard {
+  max-width: 100%;
+  height: auto;
   display: flex;
   margin: auto;
 }
 
 .headerCardImprim{
   background-color: var(--dark-orange-color);
-  border: solid 0.5rem var(--border-container);
-  min-height: 15rem;
-  margin: 25px 0px;
-  display: flex;
 } 
+
+.iconLeaf {
+  margin-left: 10px;
+}
 
 #listImprim{
   display: block;
@@ -236,7 +253,7 @@ p.excerptCardContent{
 
 .contentList {
   display: flex;
-  margin-top: 25px;
+  margin-bottom: 2rem;
 }
 
 .numero {
@@ -265,50 +282,65 @@ p.excerptCardContent{
 
 .headerCardReemploi{
   background-color: var(--light-text);
-  border: solid 0.5rem var(--border-container);
-  min-height: 15rem;
-  margin: 25px 0px;
-  display: flex;
 } 
-
-.content{
-  height: auto;
-  top: 50%;
-}
 
 .excerptCardContent{
   align-items: center;
   vertical-align: middle;
 }
 
-.tryItArticle{
-  background-image: url(/img/bande_ess.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr ;
+
+/*    BANDEAU TRY        */
+
+ .tryItArticle{
+  width: 100%;
+  position: relative;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
 }
 
-.contentTryIt{
-  height: 100%;
-  grid-column: 2/3;
-  grid-row: 2/3;
+.ImgBandeauTry{
+  width: 100%;
 }
 
-#tryItTitle{
-  font-weight: bold;
-  font-family: 'noto sans';
-  color: var(--light-text);
+.tryItContent{
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #4E4A4A;
 }
 
+.tryItTitle{
+  color:var(--light-text);
+  font-size: var(--font-xl);
+  position: relative;
+  line-height: 2rem;
+}
+
+.tryItTitle::before {
+  content: ""; /* aucun contenu, simplement un élément de style */
+  position: absolute; /* permet de positionner l'élément de style par rapport à h1 *//* aligne l'élément de style sur la gauche du titre */ /* positionne l'élément de style au milieu du titre en hauteur */
+  width: 50%; /* la largeur de l'élément de style couvre la moitié du titre */
+  border-bottom: 5px solid #D7c22E;; /* ajoute une bordure en dessous de l'élément de style */
+  margin-top: 15px;
+
+}
+
+
+/* 
 .yellowLine {
   border-top: 5px solid var(--secondary-color);
   width: 20%;
   height: 15px ;
-}
+} */
 
 .tryItButton {
   background-color: var(--light-text);
@@ -316,9 +348,8 @@ p.excerptCardContent{
 }
 
 .buttonTryIt {
-  font-size: 32px;
+  font-size: var(--font-l);
   text-align: center;
-  display: flex;
   justify-content: center;
 }
 
@@ -326,8 +357,8 @@ button {
   text-decoration: none;
   color: var(--third-color);
   font-family: 'Noto Sans';
-  height: 130px;
-  width: 480px;
+  height: 10rem;
+  width: 45rem;
 }
 
 h2 a {
@@ -336,13 +367,23 @@ h2 a {
 }
 
 
+
+
+/* FOOTER  */
 footer {
   margin: 0;
   margin-top: 50px;
-  height: 100px;
-  background-color: var(--third-color);
+  height: 10rem;
   display: flex;
-
+  margin-top: 5rem;
+  height: 10rem;
+  background: linear-gradient(
+    180deg,
+    #73c14a 3.75%,
+    #82c341 36.04%,
+    #82c341 69.38%,
+    #aed35f
+  );
 }
 
 .footerContent{
@@ -355,8 +396,13 @@ footer {
   padding: 0% 10%;
 }
 
+.contentExcerptFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .excerptFooter {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  color: var(--light-text);
+  height: auto;
 }

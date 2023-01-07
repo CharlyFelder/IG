@@ -4,41 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Informations </title>
+  <title> Informations - Page </title>
   <link rel="stylesheet" href="../css/style_info.css">
 </head>
 <body>
   
 <!---------------------------------- HEADER --------------------------------------->  
+<header class="header">
 <!---------------------------------- Navbar --------------------------------------->
-  <header>
-    <!-- <div class="headerNav"> -->
-    <img src="../img/logo.svg" alt="logo Cube 2 Bois" class="logoIG" >
-    <nav>
-      <ul>
-        <li><a href="/html/index.html"> Présentation </a></li>
-        <li><a href="#"> Fonctionnement </a></li>
-        <li><a href="#"> Essayer </a></li>
-        <li><a href="#"> Contact </a></li>
-        <li class="buttonNav"><a href="#"> s'inscrire </a></li>
-      </ul>
-    </nav>
-    <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon">
-    <!-- </div> -->
-<!---------------------------------- Navbar --------------------------------------->
-<!------------------------------- Header Landing ---------------------------------->
-    <img src="../img/img_header.jpg" alt="Background Header" id="bgImg">
-    <h1 class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> stand en bois </span> avec notre configurateur </h1>
-  </header>
-<!------------------------------- Header Landing ---------------------------------->
+  <nav>
+    <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
+    <ul>
+      <li><a href="/html/index.html"> Présentation </a></li>
+      <li><a href="#">Fonctionnement</a></li>
+      <li><a href="#">Configurateur</a></li>
+      <li><a href="#">Contactez nous</a></li>
+      <li><a href="">S'inscrire</a></li>
+    </ul>
+     <div> <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> </div>
+  </nav>
+<!---------------------------------- FIN Navbar --------------------------------------->
 
+<!------------------------------- Header Landing ---------------------------------->
+<section class = "landing">
+  <img src="../img/img_header.jpg" alt="Background Landing Page" class="bgImage">
+  <h1 class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
+    stand en bois </span> avec notre configurateur </h1>
+</section>
+  </header>
+<!------------------------------- FIN Header Landing ---------------------------------->
 <!---------------------------------- FIN HEADER --------------------------------------->  
 
 <!---------------------------------- MAIN ---------------------------------------> 
   <main>
 <!------------------------------ Section Construct -------------------------------->
     <article class="card"> 
-        <div class="headerCardConstruct">
+        <div class="headerCards headerCardConstruct">
           <div class="insideTitleCard">
             <h2 class="titleCard"> Construction 100% bois </h2>
             <img src="../img/icon_constru.svg" alt="Logo constructions" class="logoTitleCard">
@@ -60,7 +61,7 @@
                 Le bois utilisé pour les stands est de l’Epicéa SWP, labellisé NaturePlus qui provient de forêts Sibériennes. NaturePlus est un label international, composé de critères spécifiques qui promeut la protection de l’environnement et de la santé dans le secteur de la construction.
               </p>
             </div>
-            <img src="../img/photo_mockup2.svg" alt="Photo de stands" class="photoCard">
+            <img src="../img/photo_mockup2.svg" alt="Photo de stands" class="imageCard">
           </div>
         </div>
     </article>
@@ -68,17 +69,17 @@
 
 <!------------------------------ Section Imprimés -------------------------------->
     <article class="card">
-      <div class="headerCardImprim">
+      <div class="headerCards headerCardImprim">
         <div class="insideTitleCard">
           <h2 class="titleCard"> Des imprimés pour la planète </h2>
-          <img src="../img/icon_imprim.svg" alt="Logo Imprimés" class="logoTitleCard">
+          <img src="../img/icon_imprim.svg" alt="Logo Imprimés" class="logoTitleCard iconLeaf">
         </div>
       </div>
       <div class="contentCard">
         <div class="leftSide">
-          <img src="../img/photoImprime.svg" alt="Photo de stands avec des imprimés" id="photoStandsImprime">
+          <img src="../img/photoImprime.svg" alt="Photo de stands avec des imprimés" class="imageCard">
             <p  class="excerptCardContent"> Nos imprimés personnalisables présents sur les stands utiles à la décoration et habillage des stands sont labellisés Imprim'Vert. </p>
-            <img src="../img/imprim_vert.svg" alt="Label Imprim'Vert" id="labelImprimVert">
+            <!-- <img src="../img/imprim_vert.svg" alt="Label Imprim'Vert" id="labelImprimVert"> -->
         </div>
 
         <div class="rightSide">
@@ -86,31 +87,31 @@
             <li class="contentList">
               <img src="../img/num1.png" alt="N°1" class="numero">
               <p> <strong> Élimination des déchets dangereux </strong> <br>
-                Tous nos déchets dangereux, tels que les solvants, les emballages souillés et les cartouches d'encre sont traités et éliminés séparément d'autres déchets 
+                Les déchets dangereux : solvants, emballages souillés et cartouches d'encre sont traités et éliminés séparément. 
               </p>
             </li>
             <li class="contentList">
               <img src="../img/num2.png" alt="N°2" class="numero">
               <p> <strong> Non-utilisation de produits toxiques </strong> <br>
-                Aucun produit toxique pour l'homme ou la planète n'est utilisé
+                Aucun produit toxique pour l'homme ou la planète n'est utilisé.
               </p>
             </li>
             <li class="contentList">
               <img src="../img/num3.png" alt="N°3" class="numero">
               <p> <strong> Sécurisation des stockages de liquides dangereux </strong> <br>
-                Les produits potentiellements nocfis sont stockés dans des containers et entrposés dans un local dédié 
+                Les produits potentiellements nocifs sont stockés dans des containers et entrposés dans un local dédié.
               </p>
             </li>
             <li class="contentList">
               <img src="../img/num4.png" alt="N°4" class="numero">
               <p> <strong> Sensibilisation environnementale  </strong> <br>
-               Tous nos collaborateurs sont sensibilisés au développement durable et au label Imprim'Vert  
+               Tous nos collaborateurs sont sensibilisés au développement durable et au label Imprim'Vert.  
               </p>
             </li>
             <li class="contentList">
               <img src="../img/num5.png" alt="N°5" class="numero">
               <p> <strong> Suivi des consommations énergétiques du site  </strong> <br>
-                Un suivi trimestriel des consommations est mis en place 
+                Un suivi trimestriel des consommations est mis en place. 
               </p>
             </li>
           </ul>
@@ -121,7 +122,7 @@
 
 <!------------------------------ Section Réemploi -------------------------------->
     <article class="card">
-      <div class="headerCardReemploi">
+      <div class="headerCards headerCardReemploi">
         <div class="insideTitleCard">
           <h2 class="titleCard"> Le réemploi </h2>
           <img src="../img/icon_reemploi.svg" alt="Logo Réemploi" class="logoTitleCard">
@@ -130,7 +131,7 @@
 
       <div class="contentCard">
         <div class="leftSide">
-          <img src="../img/recyclage_bois.svg" alt="Image processus recyclage du bois">
+          <img src="../img/recyclage_bois.svg" alt="Image processus recyclage du bois" class="imageCard">
         </div>
         <div class="rightSide">
           <div class="content">
@@ -146,23 +147,29 @@
 
 <!----------------------------- Essayez maintenant ------------------------------->
     <article class="tryItArticle">
-      <div class="contentTryIt">
-        <div>
-          <h2 id="tryItTitle"> Essayez maintenant </h2>
+        <img src="/img/bande_ess.svg" alt="" class="ImgBandeauTry">
+        <div class="tryItContent">
+          <h2 class="tryItTitle"> Essayez maintenant </h2>
           <div class="yellowLine"></div>
+          <button class="tryItButton">
+            <h2><a href="#" class="buttonTryIt" >  CONFIGURATEUR ICI  </a></h2>
+          </button>
         </div>
-        <button  class="tryItButton">
-          <h2><a href="#" class="buttonTryIt" >  CONFIGURATEUR ICI  </a></h2>
-        </button>
-      </div>
     </article>
 <!----------------------------- Essayez maintenant ------------------------------->
 
   </main>
 
+  <div class="solidF">
+
+  </div>
+
 <footer>
   <div class="footerContent">
-    <p class="excerptFooter"> © Copyright 2022 | CUBE DE BOIS </p>
+    <div class="contentExcerptFooter">
+      <p class="excerptFooter"> © Copyright 2022 | CUBE DE BOIS </p>
+    </div>
+    
     <img src="../img/linkedin.svg" alt="LinkedIn Logo" class="footerLogo">
   </div>
 </footer>

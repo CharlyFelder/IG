@@ -11,17 +11,30 @@
   
 <!---------------------------------- HEADER --------------------------------------->  
 <header class="header">
+
 <!---------------------------------- Navbar --------------------------------------->
-  <nav>
+  <nav class="menu">
     <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
-    <ul>
-      <li><a href="/html/index.html"> Présentation </a></li>
-      <li><a href="#">Fonctionnement</a></li>
-      <li><a href="#">Configurateur</a></li>
-      <li><a href="#">Contactez-nous</a></li>
-      <li><a href="">S'inscrire</a></li>
+
+    <!---------------------------------- Toggle Nav For MediaQuerys --------------------------------------->
+    <div class="nav-toggle-button">
+      <div class="nav-toggle-bar"></div>
+    </div>
+    <!---------------------------------- FIN Toggle Nav For MediaQuerys --------------------------------------->
+
+    <!---------------------------------- Liste of Menu --------------------------------------->
+    <ul class="nav-links">
+      <li class="active-links"> <a href="/html/index.html"> Présentation </a> </li>
+      <li class="active-links"> <a href="#">Fonctionnement</a> </li>
+      <li class="active-links"> <a href="#">Configurateur</a> </li>
+      <li class="active-links"> <a href="#">Contactez-nous</a> </li>
+      <li class="active-links"> <a href="">S'inscrire</a> </li>
     </ul>
-     <div> <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> </div>
+    <!---------------------------------- FIN Liste of Menu  --------------------------------------->
+
+    <div class="containerIcon"> 
+      <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> 
+    </div>
   </nav>
 <!---------------------------------- FIN Navbar --------------------------------------->
 
@@ -63,7 +76,7 @@
           </div>
         </div>
     </article>
-<!------------------------------ Section Construct -------------------------------->
+<!------------------------------ FIN Section Construct -------------------------------->
 
 <!------------------------------ Section Imprimés -------------------------------->
     <article class="card">
@@ -117,7 +130,7 @@
         </div>
       </div>
     </article>
-<!------------------------------ Section Imprimés -------------------------------->
+<!------------------------------ FIN Section Imprimés -------------------------------->
 
 <!------------------------------ Section Réemploi -------------------------------->
     <article class="card">
@@ -141,7 +154,7 @@
         </div>
       </div>
     </article>
-<!------------------------------ Section Réemploi -------------------------------->
+<!------------------------------ FIN Section Réemploi -------------------------------->
 
 <!----------------------------- Essayez maintenant ------------------------------->
     <article class="tryItArticle">
@@ -157,13 +170,10 @@
           </a>
         </div>
     </article>
-<!----------------------------- Essayez maintenant ------------------------------->
+<!----------------------------- FIN Essayez maintenant ------------------------------->
 
   </main>
 
-  <div class="solidF">
-
-  </div>
 
 <footer>
   <div class="footerContent">
@@ -174,6 +184,8 @@
     <img src="../img/linkedin.svg" alt="LinkedIn Logo" class="footerLogo">
   </div>
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

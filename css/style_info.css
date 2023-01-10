@@ -11,12 +11,14 @@
     --dark-orange-color: #D7c22E;
     --light-button: #E3FFDE;
     --light-background: #E7F9DE;
+    --black-color: #333333;
   /* Font sizes */
     --font-sx: 1.4rem ;
-    --font-s: 1.8rem ;
+    --font-s: 1.6rem ;
     --font-m:2.4rem ;
     --font-l: 3.2rem ;
     --font-xl: 3.6rem ; 
+    --font-xll: 4.1rem;
     --font-xxl: 4.6rem;
   
   /* Spac4remes */
@@ -50,18 +52,21 @@ p{
   line-height: 3rem;
 }
 
-
-/* --------------------------------- Root Rules --------------------------------- */
+.nav-toggle{
+  display: none;
+}
+/* --------------------------------- FIN Root Rules --------------------------------- */
 
 
 /* --------------------------------- LOGO IG ------------------------------- */
 .logoIGexpo {
   /* max-width: 180px;
   max-height: 80px; */
-  height:100%;
+  height: 6rem;
   max-width: auto;
+  overflow: hidden;
  }
-/* --------------------------------- LOGO IG ------------------------------- */
+/* --------------------------------- FIN LOGO IG ------------------------------- */
 
 
 /* --------------------------------- NavBar ------------------------------- */
@@ -73,14 +78,15 @@ header {
 
 nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 60px;
-  padding: 10px 5rem;
+  padding: 5px 5rem;
   background-color:var(--light-text); 
-  gap: 5rem;
+  gap: 4rem;
   max-width: 100%;
-  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.081);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.081);
+  z-index: 50;
 }
 
 ul{
@@ -118,19 +124,26 @@ nav ul li a {
   justify-items: center;
   color: var(--dark-text);
 }
-/* --------------------------------- NavBar ------------------------------- */
+
+/* --------------------------------- Colored Active NavBar ------------------------------- */
+nav .nav-links ul li.active-links a {
+  color: var(--third-color);
+}
+/* --------------------------------- FIN Colored Active NavBar ------------------------------- */
+
+
+/* --------------------------------- FIN NavBar ------------------------------- */
 
 /* --------------------------------- User Icon ------------------------------- */
 .userIcon {
   max-width: 5vw;
   max-height: 5vh;
 }
-/* --------------------------------- User Icon ------------------------------- */
+/* --------------------------------- FIN User Icon ------------------------------- */
 
 /* --------------------------------- IMG Landing ------------------------------- */
 .landing{
   height: calc(100% - 80px);
-  background-color: #4E4A4A;
   display: flex;
   margin: 0rem 5rem;
 }
@@ -139,22 +152,20 @@ nav ul li a {
   width: 100%;
   height: 100%;
   position: relative;
+  margin-top: 3px;
 }
-/* --------------------------------- IMG Landing ------------------------------- */
+/* ---------------------------------  FIN IMG Landing ------------------------------- */
 
 
 /* --------------------------------- Landing page Text ------------------------------- */
 .excerptHeader {
   font-size: var(--font-xl);
-  max-width: 65rem;
+  max-width: 55rem;
   height: auto;
   position: absolute;
-  left: 30%; /* Mise en place de l'alignement au centre */
-  transform: translateX(-50%); /* Correction de l'offset provoqué par la 
-  /* 
-  left: 10rem; */
   font-size: var(--font-xxl);
   bottom: 3rem;
+  left: 10rem;
 }
 
 .boldGreen {
@@ -162,7 +173,7 @@ nav ul li a {
   color:var(--third-color);
   font-size: var(--font-xxl);
 }
-/* --------------------------------- Landing page Text ------------------------------- */
+/* ---------------------------------  FIN Landing page Text ------------------------------- */
 
 
 /* --------------------------------- Card Gobal Rules ------------------------------- */
@@ -242,7 +253,7 @@ p.excerptCardContent{
   margin: auto;
 }
 
-/* --------------------------------- Card Global Rules ------------------------------- */
+/* --------------------------------- FIN Card Global Rules ------------------------------- */
 
 /* --------------------------------- Card Construct ------------------------------- */
 .headerCardConstruct{
@@ -255,7 +266,7 @@ p.excerptCardContent{
   height: auto;
   margin: auto;
 }
-/* --------------------------------- Card Construct ------------------------------- */
+/* --------------------------------- FIN Card Construct ------------------------------- */
 
 /* --------------------------------- Card Imprim ------------------------------- */
 .headerCardImprim{
@@ -300,14 +311,14 @@ p.excerptCardContent{
   max-width: 80%;
   max-height: 80%;
 }
-/* --------------------------------- Card Imprim ------------------------------- */
+/* --------------------------------- FIN Card Imprim ------------------------------- */
 
 
 /* --------------------------------- Card Reemploi ------------------------------- */
 .headerCardReemploi{
   background-color: var(--light-background);
 } 
-/* --------------------------------- Card Reemploi ------------------------------- */
+/* --------------------------------- FIN Card Reemploi ------------------------------- */
 
 
 /* --------------------------------- Section TRY ------------------------------- */
@@ -349,7 +360,7 @@ p.excerptCardContent{
   border-bottom: 6px solid #D7c22E;; /* ajoute une bordure en dessous de l'élément de style */
   bottom:0;
 }
-/* -------------------------- Title Essayez maintenant ------------------------ */
+/* --------------------------  FIN Title Essayez maintenant ------------------------ */
 
 /* -------------------------- Button "CONFIGURATEUR ICI" ------------------------ */
 button {
@@ -369,11 +380,11 @@ button > h3 {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* -------------------------- Button "CONFIGURATEUR ICI" ------------------------ */
+/* -------------------------- FIN Button "CONFIGURATEUR ICI" ------------------------ */
 
-/* --------------------------------- Section TRY ------------------------------- */
+/* --------------------------------- FIN Section TRY ------------------------------- */
 
-/* FOOTER  */
+/* --------------------------------- Footer ------------------------------- */
 footer {
   background: linear-gradient(
     180deg,
@@ -410,33 +421,124 @@ footer {
   color: var(--light-text);
   height: auto;
 }
+/* --------------------------------- FIN Footer ------------------------------- */
 
 /* -------------------------- Media Query : Tablette-Wild ------------------------ */
-@media screen and (min-device-width : 1150px) and (max-device-width : 1555px){
+@media (max-width : 1255px){
   nav {
-    max-width: 100%;
-    margin: auto;
-    padding: 10px 5rem;
+    justify-content: space-between;
+  }
+  
+  .containerIcon {
+    display: none;
   }
 
-  nav ul li a {
-    font-size: var(--font-s);
+  /* Icone de menu hamburger */
+    .nav-toggle-button {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 5rem;
+    z-index: 100;
+    top: 5px;
   }
 
-  .titleCard{
-    font-size: var(--font-m);
-  } 
-
-  ul{
+/*-------------------- Set up barres menu Mobile -------------------- */
+  .nav-toggle-bar,
+  .nav-toggle-bar::before,
+  .nav-toggle-bar::after {
+    content: "";
     width: 100%;
-    margin: auto;
+    height: 4px;
+    background-color: var(--border-container);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    border-radius: 50px;
   }
 
+/*-------------------- Positionnement barres menu Mobile -------------------- */
+  .nav-toggle-bar{
+    top: 30px;
+  }
+ 
+  .nav-toggle-bar::before {
+    top: -15px;
+  }
+
+  .nav-toggle-bar::after {
+    top: 15px;
+  }
+
+
+/*-------------------- Transformation icône Hamburger en croix -------------------- */
+  .nav-toggle-button.active .nav-toggle-bar {
+    transform: rotate(135deg);
+  }
+  .nav-toggle-button.active .nav-toggle-bar::before,
+  .nav-toggle-button.active .nav-toggle-bar::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+/*-------------------- Mise en forme du menu -------------------- */
+    .nav-links {
+      visibility: hidden;
+      opacity: 1;
+      position: fixed;
+      z-index: 999;
+      background-color:var(--third-color);
+      top: -5px;
+      right: 0;
+      bottom: 0;
+      transition: all 45s ease-in-out;
+      flex-direction: column;
+    }
+  
+    .nav-links.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    ul.nav-links {
+      flex-direction: column;
+      justify-content: center;
+      height: 60vh;
+      width: 75vw;
+      gap:10rem;
+    }
+
+    nav ul li a {
+      font-size: var(--font-xl);
+    }
+
+  /*--------------------Nav links mobile -------------------- */
+  /* .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    text-align: center;
+  } */
+/*-------------------- Nav links mobile -------------------- */
+
+
+  /*-------------------- HEADER text -------------------- */
   .excerptHeader, .boldGreen {
-    font-size: var(--font-xl);
+    font-size: var(--font-xll);
     max-width: 50rem;
     bottom: 5rem;
   }
+  /*-------------------- HEADER text -------------------- */
 
   .headerCard{
     height:6rem;
@@ -446,12 +548,43 @@ footer {
     width: 40px;
     height: 50px;;
   }
-}
+
+  
+
+  /*  Transformation de l'icone Hamburger en croix */
+  /* .nav-toggle.active .nav-toggle-bar {
+    transform: rotate(135deg);
+  }
+  .nav-toggle.active .nav-toggle-bar::before,
+  .nav-toggle.active .nav-toggle-bar::after {
+    transform: rotate(90deg);
+    top: 0;
+  }  */
+
+    /* Mise en forme du menu */
+    /* .hamburgerMenu {
+      opacity: ;
+      position: fixed;
+      z-index: 999;
+      background-color: var(--dark-color);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 1s ease-in-out;
+    }
+  
+    .hamburgerMenu.open {
+      visibility: visible;
+      opacity: 0;
+    } */
+    
+  }
 /* -------------------------- Media Query : Tablette-Wild ------------------------ */
 
 
 /* -------------------------- Media Query : Tablette-small ------------------------ */
-@media screen and (min-device-width : 880px) and (max-device-width : 1150px){
+/* @media screen and (min-device-width : 880px) and (max-device-width : 1150px){
   nav {
     max-width: 100%;
     margin: auto;
@@ -470,14 +603,13 @@ footer {
   .excerptHeader, .boldGreen {
     font-size: var(--font-l);
     max-width: 40rem;
-  }
+  } */
 
   /* -------------------------- Media Query : Tablette-small ------------------------ */
-}
 
 
 /* -------------------------- Media Query : MOBILE  ------------------------ */
-@media screen and (min-device-width : 500px) and (max-device-width :880px){
+/* @media screen and (min-device-width : 500px) and (max-device-width :880px){
   nav {
     max-width: 100%;
     margin: auto;
@@ -486,7 +618,7 @@ footer {
   }
   nav ul li a {
     font-size: 10px
-    /* var(--font-sx); */
+
   }
 
   ul{
@@ -497,5 +629,5 @@ footer {
   .excerptHeader, .boldGreen {
     font-size: var(--font-xxl);
   }
-}
+} */
 /* -------------------------- Media Query : MOBILE  ------------------------ */

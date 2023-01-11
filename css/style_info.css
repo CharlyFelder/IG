@@ -15,7 +15,9 @@
   /* Font sizes */
     --font-sx: 1.4rem ;
     --font-s: 1.6rem ;
+    --font-sm:2rem;
     --font-m:2.4rem ;
+    --font-ml:2.8rem;
     --font-l: 3.2rem ;
     --font-xl: 3.6rem ; 
     --font-xll: 4.1rem;
@@ -126,7 +128,7 @@ nav ul li a {
 }
 
 /* --------------------------------- Colored Active NavBar ------------------------------- */
-nav .nav-links ul li.active-links a {
+nav .navLinks ul li.active-links a {
   color: var(--third-color);
 }
 /* --------------------------------- FIN Colored Active NavBar ------------------------------- */
@@ -164,7 +166,7 @@ nav .nav-links ul li.active-links a {
   height: auto;
   position: absolute;
   font-size: var(--font-xxl);
-  bottom: 3rem;
+  bottom: 4rem;
   left: 10rem;
 }
 
@@ -217,6 +219,15 @@ nav .nav-links ul li.active-links a {
   display: flex;
   width: 90%;
   margin: 2rem auto;
+  flex-direction: row;
+}
+
+.constructRightContentMobile{
+  flex-direction: column;;
+}
+
+.insideCardSection{
+  margin: 10px 0px;
 }
 
 .insideCardSection {
@@ -281,7 +292,6 @@ p.excerptCardContent{
   margin: 0;
   width: auto;
   margin:auto;
-  vertical-align: middle;
 }
 
 .contentList {
@@ -368,9 +378,11 @@ button {
   border-radius: 70px;
   text-decoration: none;
   font-family: 'Noto Sans';
-  height: 10rem;
-  width: 45rem;
+  padding: 3rem 3rem;
+  max-width: 45rem;
   border-style: none !important;
+  justify-content: center;
+  align-items: center;
 }
 
 button > h3 {
@@ -399,9 +411,10 @@ footer {
   display: flex;
   margin-top: 5rem;
   height: 10rem;
+  width: 100vw;
 }
 
-.footerContent{
+div.footerContent{
   display: flex;
   justify-content: space-between;
   align-self: center;
@@ -421,12 +434,17 @@ footer {
   color: var(--light-text);
   height: auto;
 }
+
 /* --------------------------------- FIN Footer ------------------------------- */
 
-/* -------------------------- Media Query : Tablette-Wild ------------------------ */
+/* -------------------------- Media Query > 1255px  ------------------------ */
 @media (max-width : 1255px){
   nav {
     justify-content: space-between;
+  }
+
+  .navLinks {
+   overflow: hidden;
   }
   
   .containerIcon {
@@ -434,7 +452,7 @@ footer {
   }
 
   /* Icone de menu hamburger */
-    .nav-toggle-button {
+    .navButton {
     width: 50px;
     height: 60px;
     display: flex;
@@ -475,71 +493,72 @@ footer {
 
 
 /*-------------------- Transformation icône Hamburger en croix -------------------- */
-  .nav-toggle-button.active .nav-toggle-bar {
+  .navButton.open .nav-toggle-bar {
     transform: rotate(135deg);
   }
-  .nav-toggle-button.active .nav-toggle-bar::before,
-  .nav-toggle-button.active .nav-toggle-bar::after {
+  .navButton.open .nav-toggle-bar::before,
+  .navButton.open .nav-toggle-bar::after {
     transform: rotate(90deg);
     top: 0;
   }
 
+  a.tryItbutton{
+    display: inline-block;
+    text-align: center;
+  }
+
+  button {
+    margin-left: 2rem;
+  }
+
+  button > h3 {
+    font-size: var(--font-s);
+  }
+
 /*-------------------- Mise en forme du menu -------------------- */
-    .nav-links {
+    /* .navLinks {
       visibility: hidden;
       opacity: 1;
       position: fixed;
       z-index: 999;
-      background-color:var(--third-color);
-      top: -5px;
+      background-color:var(--border-container);
       right: 0;
-      bottom: 0;
-      transition: all 45s ease-in-out;
-      flex-direction: column;
-    }
-  
-    .nav-links.open {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    ul.nav-links {
+      transition: all 2s ease-in-out;
+      height: 100%;
       flex-direction: column;
       justify-content: center;
-      height: 60vh;
-      width: 75vw;
-      gap:10rem;
+      height: auto;
+      width: 75%;
+      padding: 10rem 0rem;
+      gap: 8rem;
+      top: 0;
     }
+  
+    .navLinks.open {
+      visibility: hidden;
+      transition: all 2s ease-in-out;
+      opacity: 1;
+      right: 0;
+      transition: all 2s ease-in-out;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      width: 75%;
+      padding: 10rem 0rem;
+      gap: 8rem;
+      top: 0;
+    } */
 
     nav ul li a {
       font-size: var(--font-xl);
+      color: #fff;
     }
 
-  /*--------------------Nav links mobile -------------------- */
-  /* .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
+    a {width: 100%;}
   }
 
-  .nav-links{
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .nav-links li {
-    text-align: center;
-  } */
-/*-------------------- Nav links mobile -------------------- */
-
-
-  /*-------------------- HEADER text -------------------- */
-  .excerptHeader, .boldGreen {
-    font-size: var(--font-xll);
-    max-width: 50rem;
-    bottom: 5rem;
-  }
-  /*-------------------- HEADER text -------------------- */
-
+    /*-------------------- HEADER text -------------------- */
   .headerCard{
     height:6rem;
   }
@@ -548,86 +567,136 @@ footer {
     width: 40px;
     height: 50px;;
   }
+    /*-------------------- HEADER text -------------------- */
+  .excerptHeader, .boldGreen {
+    font-size: var(--font-xl);
+    max-width: 45rem;
+    bottom: 4rem;
+  } 
+  /*-------------------- HEADER text -------------------- */
 
-  
-
-  /*  Transformation de l'icone Hamburger en croix */
-  /* .nav-toggle.active .nav-toggle-bar {
-    transform: rotate(135deg);
+  .titleButton{
+    font-size: var(--font-m);
   }
-  .nav-toggle.active .nav-toggle-bar::before,
-  .nav-toggle.active .nav-toggle-bar::after {
-    transform: rotate(90deg);
-    top: 0;
-  }  */
 
-    /* Mise en forme du menu */
-    /* .hamburgerMenu {
-      opacity: ;
-      position: fixed;
-      z-index: 999;
-      background-color: var(--dark-color);
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transition: all 1s ease-in-out;
+  footer {
+    height: 7rem;
+  }
+
+ /*-------------------- Media Querys > 1000px -------------------- */
+  @media (max-width : 1000px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-l);
+      max-width: 40rem;
+    } 
+
+    .contentCard {
+      flex-direction: column;;
+    }
+
+    .insideCardSection{
+      margin: 10px 0px;
     }
   
-    .hamburgerMenu.open {
-      visibility: visible;
-      opacity: 0;
-    } */
+    .constructRightContentMobile{
+      flex-direction: column-reverse;
+    }
+  
+
+    h2{
+      font-size: var(--font-m);
+    }
+
+    button{
+      padding: 2rem 1rem;
+    }
+
+   .titleButton {
+      font-size: var(--font-sm);
+      padding: 0;
+    }
+
+    .footerLogo {
+      max-width: 40px;
+      height: auto;
+    }
+  }
+
+
+ /*-------------------- Media Querys > 800px -------------------- */
+  @media (max-width : 800px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-ml);
+      max-width: 35rem;
+    } 
+
+    .titleCard {
+      font-size: var(--font-m);
+    }
+
+    .iconCardTitle {
+      width: 35px;
+      height: 45px;
+    }
+
     
-  }
-/* -------------------------- Media Query : Tablette-Wild ------------------------ */
-
-
-/* -------------------------- Media Query : Tablette-small ------------------------ */
-/* @media screen and (min-device-width : 880px) and (max-device-width : 1150px){
-  nav {
-    max-width: 100%;
-    margin: auto;
-    padding: 10px 5rem;
-    gap: 1rem;
-  }
-  nav ul li a {
-    font-size: var(--font-sx);
+    button{
+      padding: 1.5rem 1rem;
+      
+    }
   }
 
-  ul{
-    width: 80%;
-    margin: auto;
+
+   /*-------------------- Media Querys > 700px -------------------- */
+  @media (max-width : 700px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-m);
+      max-width: 30rem;
+      left: 6rem;
+    } 
+
+    .tryItTitle{
+      font-size: var(--font-sm);
+      line-height:4rem;
+    }
+
+    button{
+      padding: 1rem 1rem;
+    }
+
+    .titleButton {
+      font-size: var(--font-s);
+    }
+    
+    footer{
+      height: 6rem;
+    }
+    
+    .excerptFooter {
+      font-size: var(--font-sx);
+    }
+
+    .footerLogo {
+      max-width: 25px;
+      height: auto;;
+    }
   }
 
-  .excerptHeader, .boldGreen {
-    font-size: var(--font-l);
-    max-width: 40rem;
-  } */
 
-  /* -------------------------- Media Query : Tablette-small ------------------------ */
-
-
-/* -------------------------- Media Query : MOBILE  ------------------------ */
-/* @media screen and (min-device-width : 500px) and (max-device-width :880px){
-  nav {
-    max-width: 100%;
-    margin: auto;
-    padding: 10px 5rem;
-    gap: 1rem;
-  }
-  nav ul li a {
-    font-size: 10px
-
+ /*-------------------- Media Querys > 600px -------------------- */
+  @media (max-width : 600px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-sm);
+      max-width: 25rem;
+    } 
   }
 
-  ul{
-    width: 80%;
-    margin: auto;
-  }
 
-  .excerptHeader, .boldGreen {
-    font-size: var(--font-xxl);
+   /*-------------------- Media Querys > 500px -------------------- */
+  @media (max-width : 500px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-sm);
+      max-width: 25rem;
+
+    } 
   }
-} */
-/* -------------------------- Media Query : MOBILE  ------------------------ */

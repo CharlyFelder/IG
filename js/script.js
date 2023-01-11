@@ -1,14 +1,13 @@
-var nav     = document.querySelector(".nav-links");
-var toggle  = document.querySelector(".nav-toggle-button");
-var page    = document.documentElement;
+// Get the nav button and the nav links
+const navButton = document.querySelector(".navButton");
+const navLinks = document.querySelector(".navLinks");
 
-console.log(page)
+// querySelector = calss/attribu
+// GetEelemnt = tableau 
 
-function doToggle(){
-    this.classList.toggle('active');
-    page.classList.toggle('active');
-    ul.classList.toggle('open');
-
-}
-
-toggle.addEventListener('click', doToggle);
+// Add a click event listener to the nav button
+navButton.addEventListener('click', function() {
+  // Toggle the "open" class on the nav links
+  navLinks.classList.add('open');
+//   navButton.classList.add('open');
+})

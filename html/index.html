@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style_responsive.css">
   <title>Document</title>
 </head>
 <body>
@@ -12,13 +13,22 @@
   <header>
     <nav>
       <div class = "logo" ><img src="../img/logo.svg" alt=""></div>
-      <div class = "menu"> 
+<!--Partie Menu burger -->
+          
+    <!-- <div class="menu-burger">  Pour le menu hamberger avec le label que css et html -->
+          <!-- <label for="toggle">☰</label>
+          <input type="checkbox" id="toggle"> -->
+          <a id="link" href="#"><span id="burger"></span></a>
+<!--Fin Partie Menu burger -->
+      <div class = "menu menuburgers" > 
+         
         <li><a href="#presentation">Présentation</a></li>
         <li><a href="#functioning-anchor">Fonctionnement</a></li>
         <li><a href="#try-anchor">Configurateur</a></li>
         <li><a href="#contact-anchor">Contactez nous</a></li>
         <li><a href="">S'inscrire</a></li>
       </div> 
+    <!-- </div> -->
     </nav>
 
 <main>
@@ -56,8 +66,8 @@
       <img class="mockup" src="../img/img_mockup.svg" alt="">
     </div>
     <div class="left">
-      <img class = "icon" src="../img/icon_fonct.svg" alt="">
-      <img src="../img/img_fonct.svg" alt="">
+      <img class = "icon-fonct" src="../img/icon_fonct.svg" alt="">
+      <img class="img-fonct" src="../img/img_fonct.svg" alt="">
       <p class ="dark">- choix des types de cloisons :<span class="color-secondary-text"> Bois, végétalisées, ajourées </span>
         - Options éclairage : rails leds (1, 2 ou 3 rails → pas généré dans la 3D)
         - Options des sols : soit bois, soit moquette (nuancier 20 couleurs)        
@@ -115,5 +125,6 @@
   <img class="icon-footer" src="../img/linkedin.svg" alt="">
 </footer>
 
+<script src="../script/script.js"></script>
 </body>
 </html>

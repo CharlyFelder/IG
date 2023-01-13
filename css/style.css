@@ -9,6 +9,14 @@
 
   --secondary-color:#F0DD6C;
   --secondary-color_bis:#73C14A;
+/* FONT SIZE    */
+  --font-responsive:1.2rem ;
+  --font-xs: 1.4rem; /*  */
+  --font-s: 1.6rem; /* texte */
+  --font-m: 2.4rem; /*   */
+  --font-l: 3.2rem;  /* h2  */
+  --font-xl: 3.6rem;
+  --font-xxl:4.8rem;
 
 
 }
@@ -24,17 +32,23 @@ body{
   width: 100%;
 }
 
+
+
+html{
+  font-size:62.5%;
+}
 /*MENU*/
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   margin-left: 10vh;
   margin-right: 10vh;
-  height: 14vh;
+  height: 13vw;
+  max-height: 100px;
   /* margin-top: 3vh; */
   align-items: center;
-  background-color:var(--light-text); 
+  background-color: var(--light-text);
 }
 
 .menu {
@@ -52,8 +66,22 @@ nav{
 
 
   nav .logo img{
-    width: 18vh;
+    width: 8.5vw;
+    min-width: 89px;
     
+  }
+
+  @media all and (max-width:600px){
+
+
+    nav {
+      margin-left: 35px;
+      margin-right: 35px;
+      height: 65px;
+      
+    }
+    
+  
   }
   
   .menu a{
@@ -62,7 +90,8 @@ nav{
   text-align: center;
   margin: 0 25px;
   color: var(--dark-text);
-  font-size: 1.2vw;
+  font-size: var(--font-s);
+  text-transform: uppercase;
   }
 
   .menu a:hover{
@@ -80,15 +109,14 @@ nav{
   
 }
 
-.h1-dark{
-  width: 38vw;
+.h1-dark {
+  width: 39vw;
   color: var(--dark-text);
   position: absolute;
-  bottom: 80px;
+  bottom: 5vw;
   margin-left: 10vh;
-  font-size: 2.3vw;
-  line-height: 8vh;
-  
+  font-size: 2.5vw;
+  line-height: 4vw;
 }
 .header{
   position: relative;
@@ -99,12 +127,15 @@ nav{
  
 }
 
+
+
+
 /*TITRES H2 PROPRIETES COMMUNES */
 
 .title{
-  font-size: 2.3rem;
+  font-size: 2.5vw;
   position: relative;
-  line-height: 3.5rem;
+  line-height: 4vw;
   
 }
 
@@ -113,11 +144,13 @@ nav{
 content: ""; 
 position: absolute; 
 background-color:var(--secondary-color);
-width:65px ;
-height: 7px;
+width:4.5vw ;
+height: 0.5vw;
 bottom: 0;
 
 }
+
+
 
 
 /* PRESENTATION  */
@@ -138,9 +171,13 @@ bottom: 0;
   top: 30%;
   color: var(--light-text);
   width: 60vw;
-  line-height: 3.3vh;
+  height: 25vw;  /*  TEMPORAIRE A ENLEVER §§§§§§§§§   */
+  line-height: 1.8vw;
   font-size: 1.2vw;
+  overflow: hidden;
 }
+
+
 
 #presentation-anchor{
   position:absolute;
@@ -157,25 +194,44 @@ a.uppercase{
   margin-top: 20px;
 }
 
+
 /* FONCTIONNEMENT*/
 .functioning{
   display:flex;
   flex-direction: row-reverse;
   justify-content: center;
+  /* flex-wrap: wrap; */
   margin-top: 10vh;
   margin-bottom: 10vh;
+  
 
 }
+
+
+
+/* Dans media queri faire une min widht des image ou de leurs 
+contenaire right et left        */
 
 .right, .left{
-  width: 515px;
+  width: 35vw;
 }
 
+.img-fonct, .mockup{
+  width: 100%;
+}
+
+/* .left{
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  
+  } */
+
 .right{
-  margin-left: 50px;
+  margin-left: 4vw;
 }
 .left{
-  margin-right: 100px;
+  margin-right: 8vw;
 }
 
 #functioning-anchor{
@@ -188,8 +244,14 @@ a.uppercase{
 
 .dark{   /*  texte   */
   line-height: 2vw;
-  font-size: 1.4vw;
+  font-size:var(--font-s);
 }
+
+.icon-fonct{
+  margin-bottom: 30px;
+  width: 10vw;
+}
+
 
 /* ESSAYER  */
 
@@ -216,8 +278,9 @@ a.uppercase{
 
 .icon-try{
   position: absolute;
-  top:20%;
+  top:18%;
   right:20% ;
+  width: 8vw;
 }
 
 button.style-button {
@@ -232,10 +295,12 @@ button.style-button {
   border: 1px  #E3FFDE;
   color: #eeeeee;
   text-align: center;
-  font-size: 28px;
+  font-size: var(--font-m);
   padding: 20px;
-  width: 350px;
-  height: 100px;
+  width: 25vw;
+  min-width: 200px;
+  height: 7vw;
+  min-height: 60px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -252,6 +317,8 @@ a.button{
   font-size: 1.5vw;
   color: var(--secondary-text);
   font-weight: 600;
+  margin: auto;
+  display: inherit;
 }
 
 a.button:hover{
@@ -259,6 +326,9 @@ a.button:hover{
 
  
 }
+
+
+
 
 /*CONTACT*/
 
@@ -269,18 +339,22 @@ a.button:hover{
 }
 #contact-anchor{
   
-  top: 15%;   /* Pourquoi ça marche sans position??      */
+  /* top: 15%;  
   
-  height:56px ;
+  height:56px ; */
 }
 .icon-contact{
-  width: 4vw;
+  width: 6vw;
+  position: absolute;
+  right: 20px;
+  top: 0px;
 }
 .container-contact{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   margin-right: 10vh;
   margin-left: 10vh;
+  position: relative;
 
 }
 
@@ -298,7 +372,7 @@ a.button:hover{
 .nom input, .mail input, .message textarea{
   background-color:#D9D9D9 ;
   border:none;
-  font-size: 16px;
+  font-size: var(--font-s);
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
 }
 
@@ -355,6 +429,7 @@ footer{
   align-items: center;
   padding-right: 10vh;
   padding-left: 10vh;
+  font-size: var(--font-s);
 }
 
 .light-footer{
@@ -364,10 +439,4 @@ footer{
 .icon-footer{
   width:3vw ;
 }
-
-
-
-
-
-
 

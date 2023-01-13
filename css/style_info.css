@@ -581,6 +581,7 @@ div.footerContent{
 
   footer {
     height: 7rem;
+    width: 100%;
   }
 
  /*-------------------- Media Querys > 1000px -------------------- */

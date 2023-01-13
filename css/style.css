@@ -106,7 +106,6 @@ nav {
 .header img{
   width: 90%;
   margin-bottom: 6vh;
-  
 }
 
 .h1-dark {
@@ -259,6 +258,7 @@ contenaire right et left        */
   width: 100%;
 }
 
+/* essayer de metter l'image en background CSS plutôt qu'en HTML */
 .try{
   width: 100%;
   position: relative;
@@ -271,8 +271,6 @@ contenaire right et left        */
   position:absolute;
   top:30%;     
   color:var(--light-text);
-
- 
 }
 
 

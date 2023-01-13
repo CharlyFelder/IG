@@ -100,13 +100,9 @@ nav ul li a {
   margin-top: 2.5rem;
 }
 
-.bgHeader {
-  position: relative;
-  height: 100vh;
+.bgImage{
   width: 100%;
-}
-
-.landingHeader {
+  height: 100%;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -341,7 +337,272 @@ footer {
 }
 
 .excerptFooter {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  color: var(--light-text);
+  height: auto;
 }
+
+/* --------------------------------- FIN Footer ------------------------------- */
+
+/* -------------------------- Media Query > 1255px  ------------------------ */
+@media (max-width : 1255px){
+  nav {
+    justify-content: space-between;
+  }
+
+  .navLinks {
+   overflow: hidden;
+  }
+  
+  .containerIcon {
+    display: none;
+  }
+
+  /* Icone de menu hamburger */
+    .navButton {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 5rem;
+    z-index: 100;
+    top: 5px;
+  }
+
+/*-------------------- Set up barres menu Mobile -------------------- */
+  .nav-toggle-bar,
+  .nav-toggle-bar::before,
+  .nav-toggle-bar::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-container);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    border-radius: 50px;
+  }
+
+/*-------------------- Positionnement barres menu Mobile -------------------- */
+  .nav-toggle-bar{
+    top: 30px;
+  }
+ 
+  .nav-toggle-bar::before {
+    top: -15px;
+  }
+
+  .nav-toggle-bar::after {
+    top: 15px;
+  }
+
+
+/*-------------------- Transformation icône Hamburger en croix -------------------- */
+  .navButton.open .nav-toggle-bar {
+    transform: rotate(135deg);
+  }
+  .navButton.open .nav-toggle-bar::before,
+  .navButton.open .nav-toggle-bar::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  a.tryItbutton{
+    display: inline-block;
+    text-align: center;
+  }
+
+  button {
+    margin-left: 2rem;
+  }
+
+  button > h3 {
+    font-size: var(--font-s);
+  }
+
+/*-------------------- Mise en forme du menu -------------------- */
+    /* .navLinks {
+      visibility: hidden;
+      opacity: 1;
+      position: fixed;
+      z-index: 999;
+      background-color:var(--border-container);
+      right: 0;
+      transition: all 2s ease-in-out;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      width: 75%;
+      padding: 10rem 0rem;
+      gap: 8rem;
+      top: 0;
+    }
+  
+    .navLinks.open {
+      visibility: hidden;
+      transition: all 2s ease-in-out;
+      opacity: 1;
+      right: 0;
+      transition: all 2s ease-in-out;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      width: 75%;
+      padding: 10rem 0rem;
+      gap: 8rem;
+      top: 0;
+    } */
+
+    nav ul li a {
+      font-size: var(--font-xl);
+      color: #fff;
+    }
+
+    a {width: 100%;}
+  }
+
+    /*-------------------- HEADER text -------------------- */
+  .headerCard{
+    height:6rem;
+  }
+
+  .iconCardTitle{
+    width: 40px;
+    height: 50px;;
+  }
+    /*-------------------- HEADER text -------------------- */
+  .excerptHeader, .boldGreen {
+    font-size: var(--font-xl);
+    max-width: 45rem;
+    bottom: 4rem;
+  } 
+  /*-------------------- HEADER text -------------------- */
+
+  .titleButton{
+    font-size: var(--font-m);
+  }
+
+  footer {
+    height: 7rem;
+  }
+
+ /*-------------------- Media Querys > 1000px -------------------- */
+  @media (max-width : 1000px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-l);
+      max-width: 40rem;
+    } 
+
+    .contentCard {
+      flex-direction: column;;
+    }
+
+    .insideCardSection{
+      margin: 10px 0px;
+    }
+  
+    .constructRightContentMobile{
+      flex-direction: column-reverse;
+    }
+  
+
+    h2{
+      font-size: var(--font-m);
+    }
+
+    button{
+      padding: 2rem 1rem;
+    }
+
+   .titleButton {
+      font-size: var(--font-sm);
+      padding: 0;
+    }
+
+    .footerLogo {
+      max-width: 40px;
+      height: auto;
+    }
+  }
+
+
+ /*-------------------- Media Querys > 800px -------------------- */
+  @media (max-width : 800px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-ml);
+      max-width: 35rem;
+    } 
+
+    .titleCard {
+      font-size: var(--font-m);
+    }
+
+    .iconCardTitle {
+      width: 35px;
+      height: 45px;
+    }
+
+    
+    button{
+      padding: 1.5rem 1rem;
+      
+    }
+  }
+
+
+   /*-------------------- Media Querys > 700px -------------------- */
+  @media (max-width : 700px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-m);
+      max-width: 30rem;
+      left: 6rem;
+    } 
+
+    .tryItTitle{
+      font-size: var(--font-sm);
+      line-height:4rem;
+    }
+
+    button{
+      padding: 1rem 1rem;
+    }
+
+    .titleButton {
+      font-size: var(--font-s);
+    }
+    
+    footer{
+      height: 6rem;
+    }
+    
+    .excerptFooter {
+      font-size: var(--font-sx);
+    }
+
+    .footerLogo {
+      max-width: 25px;
+      height: auto;;
+    }
+  }
+
+
+ /*-------------------- Media Querys > 600px -------------------- */
+  @media (max-width : 600px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-sm);
+      max-width: 25rem;
+    } 
+  }
+
+
+   /*-------------------- Media Querys > 500px -------------------- */
+  @media (max-width : 500px){
+    .excerptHeader, .boldGreen {
+      font-size: var(--font-sm);
+      max-width: 25rem;
+
+    } 
+  }

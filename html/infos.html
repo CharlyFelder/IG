@@ -15,21 +15,25 @@
 
 <!---------------------------------- Navbar --------------------------------------->
   <nav class="menu">
-    <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
+    <a href="#" class="navLogo">
+      <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
+    </a>
+
 
     <!---------------------------------- Toggle Nav For MediaQuerys --------------------------------------->
-    <div class="navButton">
-      <div class="nav-toggle-bar"></div>
-    </div>
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <!---------------------------------- FIN Toggle Nav For MediaQuerys --------------------------------------->
 
     <!---------------------------------- Liste of Menu --------------------------------------->
-    <ul class="navLinks">
-      <li class="active-links"> <a href="/html/index.html"> Présentation </a> </li>
-      <li class="active-links"> <a href="#">Fonctionnement</a> </li>
-      <li class="active-links"> <a href="#">Configurateur</a> </li>
-      <li class="active-links"> <a href="#">Contactez-nous</a> </li>
-      <li class="active-links"> <a href="">S'inscrire</a> </li>
+    <ul class="navBar">
+      <li class="navItem"> <a href="/html/index.html" class="navLink"> Présentation </a> </li>
+      <li class="navItem"> <a href="#" class="navLink">Fonctionnement</a> </li>
+      <li class="navItem"> <a href="#" class="navLink">Configurateur</a> </li>
+      <li class="navItem"> <a href="#" class="navLink">Contact</a> </li>
     </ul>
     <!---------------------------------- FIN Liste of Menu  --------------------------------------->
 
@@ -42,8 +46,10 @@
 <!------------------------------- Header Landing ---------------------------------->
 <section class = "landing">
   <img src="../img/img_header.jpg" alt="Background Landing Page" class="bgImage">
-  <h1 class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
-    stand en bois </span> avec notre configurateur </h1>
+  <div class="containerTextLanding">
+    <p class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
+    stand en bois </span> avec notre configurateur </p>
+  </div>
 </section>
   </header>
 <!------------------------------- FIN Header Landing ---------------------------------->
@@ -167,7 +173,7 @@
             <!-- <img src="../img/icon_ess.svg" alt=""> -->
           </div>
           <a href="#" class="tryItButton"> 
-            <button> <h3 class="titleButton"> Configurateur ici </h3></button>
+            <button class="buttonTRY"> <h3 class="titleButton"> Configurateur ici </h3></button>
           </a>
         </div>
     </article>
@@ -185,9 +191,8 @@
     <img src="../img/linkedin.svg" alt="LinkedIn Logo" class="footerLogo">
   </div>
 </footer>
-<!-- 
-<script src="../js/script.js"></script>
-<script src="../js/testScript.js"></script> -->
+
+<script src="../script/script_infos.js "></script>
 
 </body>
 </html>

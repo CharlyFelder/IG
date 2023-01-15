@@ -142,7 +142,7 @@ header {
 
 /* --------------------------------- IMG Landing ------------------------------- */
 .landing{
-  height: calc(90% - 80px);
+  height: calc(100% - 80px);
   display: flex;
   margin: 0vw 4vw 6vh 4vw;
 }
@@ -159,12 +159,12 @@ header {
 /* --------------------------------- Landing page Text ------------------------------- */
 
 .containerTextLanding {
-  height: 10vh;
+  height: auto;
   position: absolute;
-  margin-left: 5vw;
+  margin-left: 2vw;
   top: 65vh;
   max-width: 40vw;
-}
+  }
 
 .excerptHeader {
   font-weight: bold;
@@ -568,11 +568,7 @@ div.footerContent{
   }
 
     /*-------------------- HEADER text -------------------- */
-.containerTextLanding{
-  position: absolute;;
-  margin-left: 1vw;
-  top: 32vh;
-}
+
 
   .headerCard{
     height:6rem;
@@ -597,11 +593,15 @@ div.footerContent{
     width: 100%;
   }
 
+  .containerTextLanding{
+    top: 50vh;
+  }
+
  /*-------------------- Media Querys > 1000px -------------------- */
-  @media (max-width : 1000px){
+  @media (max-width : 1050px){
 
     .containerTextLanding{
-      top: 28vh;
+      top: 45vh;
       margin-left: 3vw
     }
     .excerptHeader, .boldGreen {
@@ -642,9 +642,9 @@ div.footerContent{
   } 
 
    /*-------------------- Media Querys > 860px -------------------- */
-  @media (max-width : 860px){
+  @media (max-width : 900px){
     .containerTextLanding{
-      top: 25vh;
+      top: 40vh;
       margin-left: 4vw
     }
     .excerptHeader, .boldGreen {
@@ -680,7 +680,7 @@ div.footerContent{
   @media (max-width : 722px){
 
     .containerTextLanding{
-      top: 23vh;
+      top: 40vh;
     }
     .excerptHeader, .boldGreen {
       font-size: var(--font-sm);
@@ -717,7 +717,7 @@ div.footerContent{
   @media (max-width : 600px){
 
     .containerTextLanding{
-      top:20vh;
+      top:35vh;
       max-width: 20rem;
     }
     .excerptHeader, .boldGreen {
@@ -731,7 +731,7 @@ div.footerContent{
   @media (max-width : 500px){
 
     .containerTextLanding{
-      top:15vh;
+      top:25vh;
       max-width: 20rem;
     }
     .excerptHeader, .boldGreen {

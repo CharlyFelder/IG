@@ -64,7 +64,7 @@ p{
 .logoIGexpo {
   height:auto;
   margin-top: 5px ;
-  max-width: 140px;
+  max-width: 120px;
   overflow: hidden;
 }
 /* --------------------------------- FIN LOGO IG ------------------------------- */
@@ -73,8 +73,8 @@ p{
 /* --------------------------------- NavBar ------------------------------- */
 header {
   width: 100%;
-  height: 100vh;
-  margin-bottom: 5rem;
+  height:auto;
+
 }
 
 .menu{
@@ -88,6 +88,7 @@ header {
   z-index: 50;
   gap: 1vw;
   position: sticky;
+  display: flex-end;
 }
 
 .navBar{
@@ -118,6 +119,12 @@ header {
   margin: 0rem 2rem;
 }
 
+
+@media (min-width : 1255px){
+  .hamburger {
+    display: none !important;
+  }
+}
 /* --------------------------------- Colored Active NavBar ------------------------------- */
 .navLink:hover {
   color: var(--third-color);
@@ -142,14 +149,13 @@ header {
 
 /* --------------------------------- IMG Landing ------------------------------- */
 .landing{
-  height: calc(100% - 80px);
   display: flex;
-  margin: 0vw 4vw 6vh 4vw;
+  margin: 0vw 4vw 19vh 4vw;
 }
 
 .bgImage{
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
   margin-top: 3px;
 }
@@ -161,21 +167,21 @@ header {
 .containerTextLanding {
   height: auto;
   position: absolute;
-  margin-left: 2vw;
-  top: 65vh;
-  max-width: 40vw;
+  margin-left: 5vw;
+  bottom: 30vh;
+  max-width: 35vw;
   }
 
 .excerptHeader {
   font-weight: bold;
   line-height: auto;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .boldGreen {
   font-weight: bold;
   color:var(--third-color);
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 /* ---------------------------------  FIN Landing page Text ------------------------------- */
 
@@ -268,7 +274,6 @@ p.excerptCardContent{
 /* --------------------------------- Card Construct ------------------------------- */
 .headerCardConstruct{
   background-color: var(--third-color);
-  
 } 
 
 .logoNaturePlus{
@@ -282,7 +287,6 @@ p.excerptCardContent{
 .headerCardImprim{
   background-color: var(--dark-orange-color);
 } 
-
 
 .listImprim{
   display: block;
@@ -410,7 +414,7 @@ footer {
   display: flex;
   margin-top: 5rem;
   height: 10rem;
-  width: 100vw;
+  width: 100%;
 }
 
 div.footerContent{
@@ -436,9 +440,48 @@ div.footerContent{
 
 
 /* --------------------------------- FIN Footer ------------------------------- */
+@media only screen and (max-width : 2500px){
+  .containerTextLanding {
+    height: auto;
+    position: absolute;
+    margin-left: 5vw;
+    bottom: 38vh;
+    max-width: 35vw;
+  }
+}
 
+
+@media only screen and (max-width : 2000px){
+  .containerTextLanding {
+    height: auto;
+    position: absolute;
+    margin-left: 5vw;
+    bottom: 45vh;
+    max-width: 35vw;
+  }
+}
+
+@media only screen and (max-width : 1700px){
+  .containerTextLanding {
+    height: auto;
+    position: absolute;
+    margin-left: 5vw;
+    bottom: 52vh;
+    max-width: 35vw;
+  }
+}
+
+@media only screen and (max-width : 1500px){
+  .containerTextLanding {
+    height: auto;
+    position: absolute;
+    margin-left: 5vw;
+    bottom: 57vh;
+    max-width: 35vw;
+  }
+}
 /* -------------------------- Media Query > 1255px  ------------------------ */
-@media (max-width : 1255px){
+@media only screen and (max-width : 1255px){
   header, .header {
     height: auto;
     padding-bottom: 0;
@@ -473,7 +516,6 @@ div.footerContent{
     text-align: center;
   }
 
-  }
   .menu{
     height:80px;
     padding: 0;
@@ -506,7 +548,7 @@ div.footerContent{
   cursor: pointer;
   z-index: 200;
   right: 4vw;
-  top: 2.5vh;
+  top: 25px;
 }
 
 /* ---------------------------------Hamburger lines ------------------------------- */
@@ -546,7 +588,7 @@ div.footerContent{
 }
 
 
-  .navLink{
+  .navlink {
     font-size: var(--font-l);
     color: var(--light-text);
     width:auto ;
@@ -594,15 +636,14 @@ div.footerContent{
   }
 
   .containerTextLanding{
-    top: 50vh;
+    bottom: 63vh;
   }
+}
 
  /*-------------------- Media Querys > 1000px -------------------- */
   @media (max-width : 1050px){
-
     .containerTextLanding{
-      top: 45vh;
-      margin-left: 3vw
+      bottom: 65vh;
     }
     .excerptHeader, .boldGreen {
       font-size: var(--font-ml);
@@ -643,10 +684,7 @@ div.footerContent{
 
    /*-------------------- Media Querys > 860px -------------------- */
   @media (max-width : 900px){
-    .containerTextLanding{
-      top: 40vh;
-      margin-left: 4vw
-    }
+
     .excerptHeader, .boldGreen {
       font-size: var(--font-m);
       max-width: 35rem;
@@ -679,12 +717,11 @@ div.footerContent{
    /*-------------------- Media Querys > 700px -------------------- */
   @media (max-width : 722px){
 
-    .containerTextLanding{
-      top: 40vh;
+    .containerTextLanding {
+      max-width: 70rem;
     }
     .excerptHeader, .boldGreen {
       font-size: var(--font-sm);
-      max-width: 30rem;
       left: 6rem;
     } 
 
@@ -716,10 +753,7 @@ div.footerContent{
  /*-------------------- Media Querys > 600px -------------------- */
   @media (max-width : 600px){
 
-    .containerTextLanding{
-      top:35vh;
-      max-width: 20rem;
-    }
+
     .excerptHeader, .boldGreen {
       font-size: var(--font-s);
       max-width: 45rem;
@@ -729,11 +763,6 @@ div.footerContent{
 
    /*-------------------- Media Querys > 500px -------------------- */
   @media (max-width : 500px){
-
-    .containerTextLanding{
-      top:25vh;
-      max-width: 20rem;
-    }
     .excerptHeader, .boldGreen {
       font-size: var(--font-xxs);
       max-width: 25rem;

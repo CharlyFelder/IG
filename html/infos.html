@@ -15,10 +15,11 @@
 
 <!---------------------------------- Navbar --------------------------------------->
   <nav class="menu">
-    <a href="#" class="navLogo">
-      <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
-    </a>
-
+    <div>
+      <a href="#" class="navLogo">
+        <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
+      </a>
+    </div>
 
     <!---------------------------------- Toggle Nav For MediaQuerys --------------------------------------->
     <button class="hamburger">
@@ -26,34 +27,31 @@
       <span></span>
       <span></span>
     </button>
-    <!---------------------------------- FIN Toggle Nav For MediaQuerys --------------------------------------->
 
     <!---------------------------------- Liste of Menu --------------------------------------->
-    <ul class="navBar">
-      <li class="navItem"> <a href="/html/index.html" class="navLink"> Présentation </a> </li>
-      <li class="navItem"> <a href="#" class="navLink">Fonctionnement</a> </li>
-      <li class="navItem"> <a href="#" class="navLink">Configurateur</a> </li>
-      <li class="navItem"> <a href="#" class="navLink">Contact</a> </li>
-    </ul>
-    <!---------------------------------- FIN Liste of Menu  --------------------------------------->
+    <div class="menuEnd">
+      <ul class="navBar">
+        <li class="navItem"> <a href="/html/index.html" class="navLink"> Présentation </a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Fonctionnement</a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Configurateur</a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Contact</a> </li>
+      </ul>
 
-    <div class="containerIcon"> 
-      <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> 
+      <div class="containerIcon"> 
+        <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> 
+      </div>
     </div>
   </nav>
-<!---------------------------------- FIN Navbar --------------------------------------->
 
 <!------------------------------- Header Landing ---------------------------------->
-<section class = "landing">
-  <img src="../img/img_header.jpg" alt="Background Landing Page" class="bgImage">
-  <div class="containerTextLanding">
-    <p class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
-    stand en bois </span> avec notre configurateur </p>
-  </div>
-</section>
+    <section class ="landing">
+      <img src="../img/backgroundHeader.jpg" alt="" class="bgImage">
+      <div class="containerHeader">
+        <span class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
+        stand en bois </span> avec notre configurateur </span>
+      </div>
+    </section>
   </header>
-<!------------------------------- FIN Header Landing ---------------------------------->
-<!---------------------------------- FIN HEADER --------------------------------------->  
 
 <!---------------------------------- MAIN ---------------------------------------> 
   <main>
@@ -83,7 +81,6 @@
           </div>
         </div>
     </article>
-<!------------------------------ FIN Section Construct -------------------------------->
 
 <!------------------------------ Section Imprimés -------------------------------->
     <article class="card">
@@ -137,7 +134,6 @@
         </div>
       </div>
     </article>
-<!------------------------------ FIN Section Imprimés -------------------------------->
 
 <!------------------------------ Section Réemploi -------------------------------->
     <article class="card">
@@ -161,7 +157,6 @@
         </div>
       </div>
     </article>
-<!------------------------------ FIN Section Réemploi -------------------------------->
 
 <!----------------------------- Essayez maintenant ------------------------------->
     <article class="tryItArticle">
@@ -177,9 +172,7 @@
           </a>
         </div>
     </article>
-<!----------------------------- FIN Essayez maintenant ------------------------------->
-
-  </main>
+  </main>   
 
 
 <footer>

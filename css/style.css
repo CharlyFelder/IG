@@ -37,6 +37,9 @@ body{
 html{
   font-size:62.5%;
 }
+
+
+
 /*MENU*/
 
 nav {
@@ -192,6 +195,21 @@ a.uppercase{
   text-transform : uppercase;
   display: inline-block;
   margin-top: 20px;
+}
+
+/* ARROW UP */
+
+
+#scroll_up {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1;
+}
+#scroll_up img {
+  width: 25px;
 }
 
 

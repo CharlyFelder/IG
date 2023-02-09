@@ -204,20 +204,20 @@ header {
   font-size:  var(--font-l);
 }
 
-/* --------------------------------- Card Gobal Rules ------------------------------- */
-.card {
+/* --------------------------------- Article Gobal Rules ------------------------------- */
+.article {
   height: auto;
   margin-top: 160px ;
 }
 
-.headerCard{
+.headerArticle{
   border: solid 0.3rem var(--border-container);
   height: 8rem;
   display: flex;
   margin: 0;
 }
 
-.insideTitleCard{
+.insideTitleArticle{
   text-align: center;
   width: auto;
   margin: auto;
@@ -227,21 +227,21 @@ header {
   gap: 1rem;
 }
 
-.titleCard {
+.titleArticle {
   margin: 0;
   padding: 0;
   font-size:var(--font-xl);
   font-weight: bold;
 }
 
-.iconCardTitle {
+.iconArticleTitle {
   float: right;
   width: 50px;
   height: 60px;
 }
 
 
-.contentCard{
+.contentArticle{
   display: flex;
   width: 90%;
   margin: 2rem auto;
@@ -253,7 +253,7 @@ header {
 }
 
 
-.insideCardSection {
+.insideArticleSection {
   display: flex;
   align-items: center;
   height: auto;
@@ -262,13 +262,13 @@ header {
   margin: 10px 0px;
 }
 
-.containerCard {
+.containerArticle {
   width: auto;
   margin:auto;
   vertical-align: middle;
 }
 
-p.excerptCardContent{
+p.textArticle{
   justify-content: center;
   width: auto;
   margin:2rem 1rem;
@@ -278,15 +278,15 @@ p.excerptCardContent{
 }
 
 
-.imageCard {
+.imageArticle {
   max-width: 100%;
   height: auto;
   display: flex;
   margin: auto;
 }
 
-/* --------------------------------- Card Construct ------------------------------- */
-.headerCardConstruct{
+/* --------------------------------- Article Construct ------------------------------- */
+.headerArticleConstruct{
   background-color: var(--third-color);
   
 } 
@@ -296,8 +296,8 @@ p.excerptCardContent{
   margin: auto;
 }
 
-/* --------------------------------- Card Imprim ------------------------------- */
-.headerCardImprim{
+/* --------------------------------- Article Imprim ------------------------------- */
+.headerArticleImprim{
   background-color: var(--dark-orange-color);
 } 
 
@@ -339,8 +339,8 @@ p.excerptCardContent{
   max-height: 80%;
 }
 
-/* --------------------------------- Card Reemploi ------------------------------- */
-.headerCardReemploi{
+/* --------------------------------- Article Reemploi ------------------------------- */
+.headerArticleReemploi{
   background-color: var(--light-background);
 } 
 
@@ -444,7 +444,7 @@ footer {
   padding: 0;
 }
 
-.card{
+.Article{
   flex-direction: row;;
 }
 /* --------------------------------- FIN Footer ------------------------------- */
@@ -456,7 +456,7 @@ footer {
 .excerptHeader, .boldGreen {
   font-size: var(--font-m);
 }
-.contentCard {
+.contentArticle {
   flex-direction: column;
 }
 .constructRightContentMobile{
@@ -597,11 +597,11 @@ footer {
   }
 
 /*-------------------- HEADER text -------------------- */
-  .headerCard{
+  .headerArticle{
     height:6rem;
   }
 
-  .iconCardTitle{
+  .iconArticleTitle{
     width: 40px;
     height: 50px;;
   }  
@@ -625,7 +625,7 @@ footer {
     .tryItContent{
       gap: 2rem
     }
-    .titleCard{
+    .titleArticle{
       font-size: var(--font-m);
     }
     .buttonTRY{
@@ -646,7 +646,7 @@ footer {
   .tryItContent{
     gap: 1rem
   }
-  .titleCard{
+  .titleArticle{
     font-size: var(--font-sm);
   }
   .buttonTRY{

@@ -1,0 +1,951 @@
+/*
+Theme Name: Ig Expo Theme 01
+Theme URI: https://wp-pagebuilderframework.com
+Template: page-builder-framework
+Author: Olivier Herzog
+Author URI: https://mapsteps.com
+Description: Page Builder Framework is a super fast, lightweight (less than 50kb on the frontend) and highly customizible WordPress theme made to work with all page builders such as Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, Thrive Architect, Brizy and more. It can be daunting to look for the perfect theme to pair with the page builder you love. Page Builder Framework is the only theme that has been specifically created for Page Builders. It has been written from ground up with SEO in mind, is 100% Gutenberg compatible and follows the latest web standards (HTML5 and schema.org markup). With its minimalistic approach and lots of customization options in the WordPress customizer, it enables you to build almost any type of website such as a Blog, Portfolio website, Agency website or WooCommerce storefront. Agency owners and Developers love Page Builder Framework for its flexibility and extendability when it comes to building outstanding client websites. If you’re not a coder, don’t worry! With endless options in the WordPress customizer it’s the perfect fit for users at any skill level. Are you using a Page Builder and still looking for the perfect theme? Look no further.
+Tags: one-column,two-columns,left-sidebar,right-sidebar,custom-colors,custom-menu,featured-images,full-width-template,custom-logo,custom-background,threaded-comments,translation-ready,blog,news,e-commerce,theme-options,block-styles,wide-blocks
+Version: 2.10.2.1673630210
+Updated: 2023-01-13 18:16:50
+
+*/
+
+
+/* --------------------------------- Root Rules--------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400&family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+  /* Colors */
+    --dark-text: #4E4A4A;
+    --light-text: #fff;
+    --secondary-color:#EFDE6A;
+    --third-color: #73C14A;
+    --border-container: #2a5f31;
+    --dark-orange-color: #D7c22E;
+    --light-button: #E3FFDE;
+    --light-background: #E7F9DE;
+    --black-color: #333333;
+  /* Font sizes */
+    --font-sx: 1.4rem ;
+    --font-s: 1.6rem ;
+    --font-sm:2rem;
+    --font-m:2.4rem ;
+    --font-ml:2.8rem;
+    --font-l: 3.2rem ;
+    --font-xl: 3.6rem ; 
+    --font-xll: 4.1rem;
+    --font-xxl: 4.6rem;
+  
+  /* Spac4remes */
+    --space-xs: 12px;
+    --space-s:  24px;
+    --space-m:  48px;
+    --space-l:  96px;
+}
+
+html, body {
+  font-size: 62.5%; /* permet de ramener la taille par défaut à 10px (10 / 16 = 0.625) */
+  min-width: 100%;
+}
+
+article {
+  width: auto;
+  padding: 0vw 4vw;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: montserrat;
+  font-size: var(--font-s);
+}
+
+h1, h2, h3 {
+  font-family: 'noto sans';
+  margin: 20px 20px 20px 20px;
+}
+
+h2{
+  font-size: var(--font-xl);
+}
+p{
+  margin:0px 10px 0px 0px ;
+}
+
+
+.nav-toggle{
+  display: none;
+}
+
+/* --------------------------------- LOGO IG ------------------------------- */
+.logoIGexpo {
+  height:auto;
+  margin-top: 5px ;
+  max-width: 140px;
+  overflow: hidden;
+}
+
+
+/* --------------------------------- NavBar ------------------------------- */
+header {
+  width: 100%;
+  max-height: 95vh;
+  height:auto; /*modified */
+  align-items: center;
+  margin-bottom: 15vh;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 5px 4vw;
+  background-color:var(--light-text);
+  max-width: 100%;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.081);
+  z-index: 50;
+  gap: 1vw;
+  position: sticky;
+  justify-content: space-between;
+}
+
+.navBar{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.navItem {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navLink {
+  font-family: 'noto sans';
+  font-weight: 500;
+  font-size: 15px;
+  /*  var(--font-s); */
+  align-items: center;
+  justify-items: center;
+  color: var(--dark-text);
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0rem 2rem;
+}
+
+.menuEnd {
+  display: flex;
+}
+
+/* --------------------------------- Colored Active NavBar ------------------------------- */
+.navLink:hover {
+  color: var(--third-color);
+}
+
+/* --------------------------------- User Icon ------------------------------- */
+.containerIcon{
+  height: auto;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  cursor: pointer;;
+}
+
+.fa-user {
+  color: #2a5f31;
+  font-size: 35px;
+}
+
+/* --------------------------------- IMG Landing ------------------------------- */
+.landing{
+  position: relative;
+  height: auto;
+  width: auto;
+  margin: 0rem 4vw 8vh 4vw;
+  display: flex;
+  max-width: 100%;
+}
+.bgImage{
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+  /* margin-bottom: 6vh; */
+}
+.excerptHeader {
+  position: absolute;
+  font-weight: bold;
+  line-height:auto;
+  font-size: 2.5vw;
+  bottom: 0;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* font-size: var(--font-l); */
+  width: 31vw;
+}
+
+.boldGreen {
+  font-weight: bold;
+  color:var(--third-color);
+  /* font-size:  var(--font-l); */
+  font-size: 2.5vw;
+}
+
+
+
+/* --------------------------------- Article Gobal Rules ------------------------------- */
+.article {
+  height: auto;
+  margin-top: 160px ;
+  position: absolute;
+}
+
+.headerArticle{
+  border: solid 0.3rem var(--border-container);
+  background-color: var(--third-color);
+  height: 8rem;
+  display: flex;
+  margin: 0;
+}
+
+.insideTitleArticle{
+  text-align: center;
+  width: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 1rem;
+}
+
+.titleArticle {
+  margin: 0;
+  padding: 0;
+  font-size:var(--font-xl);
+  font-weight: bold;
+}
+
+.iconArticleTitle {
+  float: right;
+  width: 50px;
+  height: 60px;
+}
+
+
+.contentArticle{
+  display: flex;
+  width: 90%;
+  margin: 2rem auto;
+  flex-direction: row;
+}
+
+.constructRightContentMobile{
+  flex-direction: column;
+}
+
+
+.insideArticleSection {
+  display: flex;
+  align-items: center;
+  height: auto;
+  flex: 1;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.containerArticle {
+  width: auto;
+  margin:auto;
+  vertical-align: middle;
+}
+
+p.textArticle{
+  justify-content: center;
+  width: auto;
+  margin:2rem 1rem;
+  text-align: left;
+  align-items: center;
+  vertical-align: middle;
+}
+
+
+.imageArticle {
+  max-height: 300px;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
+
+/* --------------------------------- Article Construct ------------------------------- */
+
+/* --------------------------------- Article Imprim ------------------------------- */
+
+
+
+.listImprim{
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  margin:auto;
+}
+
+.contentList {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.numero {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 2%;
+}
+
+#photoStandsImprime{
+  padding-bottom: 10px;
+  display: flex;
+  margin: auto;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+#labelImprimVert {
+  display: flex ;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* --------------------------------- Article Reemploi ------------------------------- */
+
+
+/* --------------------------------- Section TRY ------------------------------- */
+.tryItArticle{
+  width:auto;
+  position: relative;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+}
+
+.ImgBandeauTry{
+  width: 100%;
+}
+
+.tryItContent{
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+/* -------------------------- Title Essayez maintenant ------------------------ */
+.tryItTitle{
+  color:var(--light-text);
+  position: relative;
+  line-height: 6rem;
+}
+
+.tryItTitle::before {
+  content: ""; /* aucun contenu, simplement un élément de style */
+  position: absolute; /* permet de positionner l'élément de style par rapport à h1 *//* aligne l'élément de style sur la gauche du titre */ /* positionne l'élément de style au milieu du titre en hauteur */
+  width: 45%; /* la largeur de l'élément de style couvre la moitié du titre */
+  border-bottom: 6px solid #D7c22E;; /* ajoute une bordure en dessous de l'élément de style */
+  bottom:0;
+}
+
+/* -------------------------- Button "CONFIGURATEUR ICI" ------------------------ */
+.buttonTRY {
+  background-color: var(--light-button);
+  border-radius: 70px;
+  text-decoration: none;
+  font-family: 'Noto Sans';
+  padding: 1.5rem 2rem;
+  max-width: 45rem;
+  border-style: none !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleButton {
+  text-decoration: none;
+  color: var(--third-color);
+  font-size: var(--font-l);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* --------------------------------- Footer ------------------------------- */
+footer {
+  background: linear-gradient(
+    180deg,
+    #73c14a 3.75%,
+    #82c341 36.04%,
+    #82c341 69.38%,
+    #aed35f
+  );
+  margin: 0;
+  margin-top: 50px;
+  height: 10rem;
+  display: flex;
+  height: 100px;
+  width: 100%;
+}
+
+.footerContent{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.excerptFooter {
+  color: var(--light-text);
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.Article{
+  flex-direction: row;;
+}
+/* --------------------------------- FIN Footer ------------------------------- */
+.presentation{
+  position: relative;
+  width: 100%;
+  display: flex;    /* Pour centrer le texte p */
+  justify-content: center;
+}
+
+.presentation img{
+  width: 100%;
+}
+
+.light-presentation{   /* texte    */
+  position:absolute;
+  top: 30%;
+  color: var(--light-text);
+  width: 60vw;
+  height: 25vw;  /*  TEMPORAIRE A ENLEVER §§§§§§§§§   */
+  line-height: 1.8vw;
+  font-size: 1.2vw;
+  overflow: hidden;
+}
+
+
+
+#presentation-anchor{
+  position:absolute;
+  top:15%;     
+  left: 10vh;  
+  color:var(--light-text);
+ 
+}
+
+a.uppercase{
+  color:var(--light-text);
+  text-transform : uppercase;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
+/* FONCTIONNEMENT*/
+.functioning{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  
+
+}
+
+
+
+/* Dans media queri faire une min widht des image ou de leurs 
+contenaire right et left        */
+
+.right, .left{
+  width: 35vw;
+}
+
+.img-fonct, .mockup{
+  width: 100%;
+}
+
+/* .left{
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  
+  } */
+
+.right{
+  margin-left: 4vw;
+}
+.left{
+  margin-right: 8vw;
+}
+
+#functioning-anchor{
+  margin-bottom: 40px;
+}
+
+.mockup{
+  margin-top: 40px;
+}
+
+.dark{   /*  texte   */
+  line-height: 2vw;
+  font-size:var(--font-s);
+}
+
+.icon-fonct{
+  margin-bottom: 30px;
+  width: 10vw;
+}
+
+
+/* ESSAYER  */
+
+.try img.img-try{
+  width: 100%;
+}
+
+.try{
+  width: 100%;
+  position: relative;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+}
+
+#try-anchor{
+  position:absolute;
+  top:30%;     
+  color:var(--light-text);
+
+ 
+}
+
+
+.icon-try{
+  position: absolute;
+  top:18%;
+  right:20% ;
+  width: 8vw;
+}
+
+button.style-button {
+  position: absolute;
+
+}
+
+button.style-button {
+  display: inline-block;
+  background-color: #E3FFDE;
+  border-radius: 50px;
+  border: 1px  #E3FFDE;
+  color: #eeeeee;
+  text-align: center;
+  font-size: var(--font-m);
+  padding: 20px;
+  width: 25vw;
+  min-width: 200px;
+  height: 7vw;
+  min-height: 60px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 100px;
+  box-shadow:4px 4px 20px rgb(23, 22, 22);
+}
+
+a.button{
+  text-decoration: none;
+  text-transform : uppercase;
+  font-size: 1.5vw;
+  color: var(--secondary-text);
+  font-weight: 600;
+  margin: auto;
+  display: inherit;
+}
+
+a.button:hover{
+  color:var(--secondary-color);
+
+ 
+}
+
+
+
+
+/*CONTACT*/
+
+.contact{
+ 
+  width: 100%;
+  margin-bottom: 10vh;
+}
+#contact-anchor{
+  
+  /* top: 15%;  
+  
+  height:56px ; */
+}
+.icon-contact{
+  width: 6vw;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+.container-contact{
+  /* display: flex;
+  justify-content: space-between; */
+  margin-right: 10vh;
+  margin-left: 10vh;
+  position: relative;
+
+}
+
+.form-contact{
+
+  margin-top: 7vh;
+
+
+}
+.conteneur-nom-mail{
+  display: flex;
+  justify-content: center;
+}
+
+.nom input, .mail input, .message textarea{
+  background-color:#D9D9D9 ;
+  border:none;
+  font-size: var(--font-s);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+.nom input, .mail input{
+  height: 50px;
+  padding-left: 10px;
+  width: 490px;
+}
+.nom input{
+  margin-right: 20px;
+}
+.mail input{
+  margin-left: 20px;
+}
+.message textarea{
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  width: 1020px;
+  margin-top: 40px;
+}
+
+::placeholder{
+  color:var(--dark-text);
+
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+}
+
+.button-contact{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.info{
+  margin-top: 40px;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+}
+@media (max-width : 1500px){
+.excerptHeader, .boldGreen {
+  /* bottom: 50%;
+  left: 22%; */
+  /* font-size: var(--font-m); */
+}
+.contentArticle {
+  flex-direction: column;
+}
+.constructRightContentMobile{
+  flex-direction: reverse;
+}
+.contentListContainer{
+  margin: 10px 0px;
+}
+}
+
+/* -------------------------- Media Query > 1255px  ------------------------ */
+@media (max-width : 1255px){
+  .landing{
+    top: 100px;
+  }
+
+  .containerHeader{
+  width:250px;
+}
+/* .excerptHeader, .boldGreen {
+  font-size: var(--font-sm);
+} */
+
+  .navBar{
+    display: none;
+  }
+
+  .menuEnd{
+    width: 100%;
+    top: 0;
+  }
+  .navBar-active{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100vh;
+    background-color: var(--border-container);
+    margin: auto;
+    height: 100vh;
+    /* 
+    width: 100vw;
+    z-index:1 ;
+    margin: auto;
+    text-align: center;
+    bottom: 0; */
+    /* padding-top: 80vh; */
+
+  }
+
+  .navItem{
+    width: 100%;
+    text-align: center;
+  }
+  .navLink{
+    font-size: var(--font-xl) ;
+    text-align: center;
+    width: 100%;
+    color: var(--light-text);
+    }
+
+  .menu{
+    height:100px;
+    padding: 0;
+    display: flex;
+    position: fixed;
+    z-index: 9000;
+    background-color:var(--light-text);
+    width: 100%;
+    padding-left: 4%;
+  }
+  
+  .navLogo {
+    /* position: fixed; */
+    left: 4vw;
+  }
+  .navItem {
+    text-align: center;
+    margin: auto;
+  }
+
+  img.usericon{
+    width: 10px;
+    height: 10px;
+  }
+/* ---------------------------------Hamburger Menu for mediaQuerys ------------------------------- */
+/* ---------------------------------Hamburger position & interraction ------------------------------- */
+.hamburger {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  z-index: 200;
+  right: 4vw;
+  top: 40px;
+}
+
+/* ---------------------------------Hamburger lines ------------------------------- */
+.hamburger span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin-bottom: 7px;
+  background-color: var(--border-container);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+/* ---------------------------------Hamburger Animation ------------------------------- */
+.hamburger:hover span:nth-child(2){
+  transform: translateX(10px);
+  background-color: var(--dark-orange-color);
+}
+.hamburger.is-active span:nth-child(1){
+  transform: translate(0px, -2px) rotate(45deg);
+  background-color: var(--light-text);
+}
+
+.hamburger.is-active span:nth-child(2){
+  opacity: 0;
+  transform: translateX(15px)
+}
+
+.hamburger.is-active span:nth-child(3){
+  transform: translate(-3px, 4px) rotate(-45deg);
+  background-color: var(--light-text);
+}
+
+.hamburger.is-active:hover span {
+  background-color: var(--dark-orange-color);
+}
+
+  .containerIcon {
+    display: none;
+  }
+
+
+  a.tryItbutton{
+    display: inline-block;
+    text-align: center;
+  }
+
+  .buttonTRY {
+    margin-left: 2rem;
+    font-size: var(--font-s);
+  }
+
+/*-------------------- HEADER text -------------------- */
+  .headerArticle{
+    height:6rem;
+  }
+
+  .iconArticleTitle{
+    width: 40px;
+    height: 50px;;
+  }  
+  .constructRightContentMobile{
+    flex-direction: column-reverse;
+  }
+  .listImprim{
+    margin-left: 20px;
+  }
+  .titleButton{
+    font-size: var(--font-m);
+  }
+  footer {
+    height: 7rem;
+    width: 100%;
+  }
+}
+
+ /*-------------------- Media Querys > 1000px -------------------- */
+  @media (max-width : 1000px){
+    .tryItContent{
+      gap: 2rem
+    }
+    .titleArticle{
+      font-size: var(--font-m);
+    }
+    .buttonTRY{
+      padding: 0.5rem 0.5rem;
+      margin: 0;
+    }
+    .tryItTitle, .titleButton{
+      font-size: var(--font-s);
+      margin: 5px;
+    }
+    .tryItTitle{
+      line-height: 4rem;
+    }
+  } 
+
+ /*-------------------- Media Querys > 800px -------------------- */
+  @media (max-width : 800px){
+  .tryItContent{
+    gap: 1rem
+  }
+  .titleArticle{
+    font-size: var(--font-sm);
+  }
+  .buttonTRY{
+    padding: 5px 10px;
+    margin: 0;
+  }
+} 
+
+ /*-------------------- Media Querys > 600px -------------------- */
+  @media (max-width : 600px){
+    /* .excerptHeader, .boldGreen {
+      font-size: var(--font-s);
+      max-width: 45rem;
+    }  */
+  } 
+
+
+   /*-------------------- Media Querys > 500px -------------------- */
+  @media (max-width : 500px){
+    /* .excerptHeader, .boldGreen {
+      font-size: var(--font-xxs);
+      max-width: 25rem;
+
+    }  */
+  }
+
+  /* --------------------------------- FOR WORDPRESS --------------------------------- */
+
+
+
+ul.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-logo{
+  height: auto;
+  width: 150px;
+  margin: 10px 20px;
+}
+
+ul{
+  margin: 0;
+}
+
+
+
+
+

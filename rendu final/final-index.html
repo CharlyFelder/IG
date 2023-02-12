@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Informations - Page </title>
+  <link rel="stylesheet" href="final-style.css">
+  <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+</head>
+<body>
+  
+<!---------------------------------- HEADER --------------------------------------->  
+<header class="header">
+
+<!---------------------------------- Navbar --------------------------------------->
+  <nav class="menu">
+    <div>
+      <a href="#" class="navLogo">
+        <img src="../img/logo.svg" alt="Logo IG EXPO"  class = "logoIGexpo">
+      </a>
+    </div>
+
+    <!---------------------------------- Toggle Nav For MediaQuerys --------------------------------------->
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!---------------------------------- Liste of Menu --------------------------------------->
+    <div class="menuEnd">
+      <ul class="navBar">
+        <li class="navItem"> <a href="/html/index.html" class="navLink"> Présentation </a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Fonctionnement</a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Configurateur</a> </li>
+        <li class="navItem"> <a href="#" class="navLink">Contact</a> </li>
+      </ul>
+
+      <div class="containerIcon"> 
+        <img src="../img/icon_connect.svg" alt="Logo utilisateur" class="userIcon"> 
+      </div>
+    </div>
+  </nav>
+
+<!------------------------------- Header Landing ---------------------------------->
+    <section class ="landing">
+      <img src="../img/backgroundHeader.jpg" alt="" class="bgImage">
+      <div class="containerHeader">
+        <span class="excerptHeader"> Créez et réservez votre <span class="boldGreen"> 
+        stand en bois </span> avec notre configurateur </span>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="presentation">
+      <img src="../img/bande_present.svg" alt="">
+      <h2 id="presentation-anchor" class="title">Présentation</h2>
+      <p class="light-presentation">Cursus vitae congue mauris rhoncus aenean vel. Viverra orci sagittis eu volutpat odio facilisis. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. 
+        Sit amet venenatis urna cursus eget nunc. Morbi tempus iaculis urna id volutpat.     
+        Urna cursus eget nunc.      
+        <br><br>  sit amet venenatis urna cursus eget nunc.Cursus vitae congue mauris rhoncus aenean vel. Viverra orci sagittis eu volutpat odio facilisis. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Sit amet venenatis urna cursus eget nunc. Morbi tempus iaculis urna id volutpat. Urna cursus eget nunc. sit amet venenatis urna cursus eget nunc. <br>
+        <br>   sit amet venenatis urna cursus eget nunc.Cursus vitae congue mauris rhoncus aenean vel. Viverra orci sagittis eu volutpat odio facilisis. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Sit amet venenatis 
+        <br>
+        <a class="uppercase" href="index_info.html">En savoir plus</a></p>
+    </section>
+  
+    <section class="functioning">
+      <div class="right">
+        <h2 id="functioning-anchor" class="title">Fonctionnement</h2>
+        <p class ="dark">.Il s'agit de stand en bois de dimensions <span class="color-secondary-text"> 3mx3m ou 4mx4m</span>
+          pour les clients la possibilité de configurer et <span class="color-secondary-text"> choisir les options :</span>     
+          - dimensions
+          - Nombres de coté ouverts ou fermés - ouvrir <span class="color-secondary-text">1, 2 ou 3 côtés.</span>
+          </p>
+        <img class="mockup" src="../img/img_mockup.svg" alt="">
+      </div>
+      <div class="left">
+        <img class = "icon-fonct" src="../img/icon_fonct.svg" alt="">
+        <img class="img-fonct" src="../img/img_fonct.svg" alt="">
+        <p class ="dark">- choix des types de cloisons :<span class="color-secondary-text"> Bois, végétalisées, ajourées </span>
+          - Options éclairage : rails leds (1, 2 ou 3 rails → pas généré dans la 3D)
+          - Options des sols : soit bois, soit moquette (nuancier 20 couleurs)        
+          Le module pourrait générer un devis estimatif accompagné d'un rendu en 3D</p>
+        
+      </div>
+    </section>
+  
+    <article class="tryItArticle">
+      <img src="/img/bande_ess.svg" alt="" class="ImgBandeauTry">
+      <div class="tryItContent">
+        <div class="">
+          <h2 class="tryItTitle"> Essayez maintenant </h2>
+
+          <!-- <img src="../img/icon_ess.svg" alt=""> -->
+        </div>
+        <a href="#" class="tryItButton"> 
+          <button class="buttonTRY"> <h3 class="titleButton"> Configurateur ici </h3></button>
+        </a>
+      </div>
+  </article>
+  
+    <section class="contact">
+      <div class="container-contact">
+        <h2 id="contact-anchor" class="title">Contactez nous</h2>
+        <img class = "icon-contact" src="../img/icon_contact.svg" alt="">
+      </div>
+  
+  
+  <div class="form-contact">  
+    <form action="" method="post">
+     <div class="conteneur-nom-mail">
+      <div class ="nom">
+        <label for="nom"></label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+      </div>
+      <div class="mail">
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse mail" required>
+      </div>
+    </div>
+      <div class="message">
+        <label for="message"></label>
+        <textarea id="message" name="message" placeholder="Écrivez votre message" required></textarea>
+      </div>
+      <div class="button-contact">
+        <button type="submit">Envoyer mon message</button>
+      </div>
+    </form>
+  </div>
+  
+     <div class="text-center">
+      <p class="dark info">www.igexpo.fr  |  +33 (0)3 81 51 42 24  |  info@igexpo.fr</p>
+    </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footerContent">
+      <div class="contentExcerptFooter">
+        <p class="excerptFooter"> © Copyright 2022 | CUBE DE BOIS </p>
+      </div>
+      <img src="../img/linkedin.svg" alt="LinkedIn Logo" class="footerLogo">
+    </div>
+  </footer>
+  
+  <script src="../script/script_infos.js "></script>
+  
+  </body>
+  </html>
